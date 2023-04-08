@@ -1,6 +1,6 @@
 const productos = [{
     id: 1,
-    foto: "./Aguacongasnativa600ml.png",
+    foto: "./img/Aguacongasnativa600ml.png",
     articulo: "Agua con gas",
     descripcion: "BT 600ml",
     marca: "Nativa",
@@ -8,7 +8,7 @@ const productos = [{
 },
 {
     id: 2,
-    foto: "./DentalcleanHilodentalconcera130m.jpg",
+    foto: "./img/DentalcleanHilodentalconcera130m.jpg",
     articulo: "Hilo Dental",
     descripcion: "Con cera 130m",
     marca: "DENTALCLEAN",
@@ -16,7 +16,7 @@ const productos = [{
 },
 {
     id: 3,
-    foto: "./EnjuagueBucalDENTALCLEANBlueDiamond-Mentasuave.jpg",
+    foto: "./img/EnjuagueBucalDENTALCLEANBlueDiamond-Mentasuave.jpg",
     articulo: "Enjuague Bucal",
     descripcion: "Blue Diamond",
     marca: "DENTALCLEAN",
@@ -24,7 +24,7 @@ const productos = [{
 },
 {
     id: 4,
-    foto: "./EnjuagueBucalDENTALCLEANGreenDiamond-HortelaSuave.jpg",
+    foto: "./img/EnjuagueBucalDENTALCLEANGreenDiamond-HortelaSuave.jpg",
     articulo: "Enjuague Bucal",
     descripcion: "Green Diamond",
     marca: "DENTALCLEAN",
@@ -32,7 +32,7 @@ const productos = [{
 },
 {
     id: 5,
-    foto: "./CEPERASalsadeSoja150ml.jpg",
+    foto: "./img/CEPERASalsadeSoja150ml.jpg",
     articulo: "Salsa de Soja",
     descripcion: "150ml",
     marca: "CEPERA",
@@ -40,7 +40,7 @@ const productos = [{
 },
 {
     id: 6,
-    foto: "./CEPERASalsacalabresayPimienta150ml.jpg",
+    foto: "./img/CEPERASalsacalabresayPimienta150ml.jpg",
     articulo: "Salsa",
     descripcion: "Calabresa y Pimienta",
     marca: "CEPERA",
@@ -48,7 +48,7 @@ const productos = [{
 },
 {
     id: 7,
-    foto: "./MayonesaSalsayCebollaSinGluten.jpg",
+    foto: "./img/MayonesaSalsayCebollaSinGluten.jpg",
     articulo: "Mayonesa",
     descripcion: "Salsa y Cebolla",
     marca: "CEPERA",
@@ -56,7 +56,7 @@ const productos = [{
 },
 {
     id: 8,
-    foto: "./CEPERASalsaInglesa150ml.jpg",
+    foto: "./img/CEPERASalsaInglesa150ml.jpg",
     articulo: "Salsa Inglesa",
     descripcion: "150ml",
     marca: "CEPERA",
@@ -64,7 +64,7 @@ const productos = [{
 },
 {
     id: 9,
-    foto: "./dulcedeleche-los-nietitos.png",
+    foto: "./img/dulcedeleche-los-nietitos.png",
     articulo: "Dulce de leche",
     descripcion: "700g",
     marca: "LOS NIETITOS",
@@ -72,7 +72,7 @@ const productos = [{
 },
 {
     id: 10,
-    foto: "./cocacola1.jpg",
+    foto: "./img/cocacola1.jpg",
     articulo: "Coca Cola",
     descripcion: "Sabor Original 1.5L",
     marca: "COCA COLA",
@@ -80,7 +80,7 @@ const productos = [{
 },
 {
     id: 11,
-    foto: "./Patricia340cc.png",
+    foto: "./img/Patricia340cc.png",
     articulo: "Cerveza",
     descripcion: "340cc",
     marca: "PATRICIA",
@@ -88,7 +88,7 @@ const productos = [{
 },
 {
     id: 12,
-    foto: "./salusfrutte-limonada.png",
+    foto: "./img/salusfrutte-limonada.png",
     articulo: "Agua Saborizada",
     descripcion: "Frutte Limnada",
     marca: "SALUS",
