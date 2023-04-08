@@ -16,7 +16,7 @@ const productos = [{
 },
 {
     id: 3,
-    foto: "/EnjuagueBucalDENTALCLEANBlueDiamond-Mentasuave.jpg",
+    foto: "./EnjuagueBucalDENTALCLEANBlueDiamond-Mentasuave.jpg",
     articulo: "Enjuague Bucal",
     descripcion: "Blue Diamond",
     marca: "DENTALCLEAN",
