@@ -1,17 +1,14 @@
-//PRODUCTOS 
-
-
 const productos = [{
     id: 1,
-    foto: "./Imagenes/IMAGENES PRODUCTOS VENTA/CepillodeDientesDENTALCLEANDualMacio2x1.jpg",
-    articulo: "Cepillo de Dientes",
-    descripcion: "Dual Macio 2x1",
-    marca: "DENTALCLEAN",
+    foto: "/Aguacongasnativa600ml.png",
+    articulo: "Agua con gas",
+    descripcion: "BT 600ml",
+    marca: "Nativa",
     precio: 148
 },
 {
     id: 2,
-    foto: "./Imagenes/IMAGENES PRODUCTOS VENTA/DentalcleanHilodentalconcera130m.jpg",
+    foto: "/DentalcleanHilodentalconcera130m.jpg",
     articulo: "Hilo Dental",
     descripcion: "Con cera 130m",
     marca: "DENTALCLEAN",
@@ -19,7 +16,7 @@ const productos = [{
 },
 {
     id: 3,
-    foto: "./Imagenes/IMAGENES PRODUCTOS VENTA/EnjuagueBucalDENTALCLEANBlueDiamond-Mentasuave.jpg",
+    foto: "/EnjuagueBucalDENTALCLEANBlueDiamond-Mentasuave.jpg",
     articulo: "Enjuague Bucal",
     descripcion: "Blue Diamond",
     marca: "DENTALCLEAN",
@@ -27,15 +24,15 @@ const productos = [{
 },
 {
     id: 4,
-    foto: "./Imagenes/IMAGENES PRODUCTOS VENTA/EnjuagueBucalDENTALCLEANGreenDiamond-HortelaSuave.jpg",
+    foto: "/EnjuagueBucalDENTALCLEANGreenDiamond-HortelaSuave.jpg",
     articulo: "Enjuague Bucal",
-    descripcion: "Blue Diamond",
+    descripcion: "Green Diamond",
     marca: "DENTALCLEAN",
     precio: 250
 },
 {
     id: 5,
-    foto: "./Imagenes/IMAGENES PRODUCTOS VENTA/CEPERASalsadeSoja150ml.jpg",
+    foto: "/CEPERASalsadeSoja150ml.jpg",
     articulo: "Salsa de Soja",
     descripcion: "150ml",
     marca: "CEPERA",
@@ -43,26 +40,58 @@ const productos = [{
 },
 {
     id: 6,
-    foto: "./Imagenes/IMAGENES PRODUCTOS VENTA/CEPERASalsacalabresayPimienta150ml.jpg",
+    foto: "/CEPERASalsacalabresayPimienta150ml.jpg",
     articulo: "Salsa",
     descripcion: "Calabresa y Pimienta",
     marca: "CEPERA",
     precio: 49
-}
+},
 {
     id: 7,
-    foto: "./Imagenes/IMAGENES PRODUCTOS VENTA/MayonesaSalsayCebollaSinGluten.jpg",
+    foto: "/MayonesaSalsayCebollaSinGluten.jpg",
     articulo: "Mayonesa",
     descripcion: "Salsa y Cebolla",
     marca: "CEPERA",
     precio: 49
-}
+},
 {
     id: 8,
-    foto: "./Imagenes/IMAGENES PRODUCTOS VENTA/",
+    foto: "/CEPERASalsaInglesa150ml.jpg",
     articulo: "Salsa Inglesa",
     descripcion: "150ml",
     marca: "CEPERA",
     precio: 49
+},
+{
+    id: 9,
+    foto: "/dulcedeleche-los-nietitos.png",
+    articulo: "Dulce de leche",
+    descripcion: "700g",
+    marca: "LOS NIETITOS",
+    precio: 130
+},
+{
+    id: 10,
+    foto: "/cocacola1.jpg",
+    articulo: "Coca Cola",
+    descripcion: "Sabor Original 1.5L",
+    marca: "COCA COLA",
+    precio: 170
+},
+{
+    id: 11,
+    foto: "/Patricia340cc.png",
+    articulo: "Cerveza",
+    descripcion: "340cc",
+    marca: "PATRICIA",
+    precio: 100
+},
+{
+    id: 12,
+    foto: "/salusfrutte-limonada.png",
+    articulo: "Agua Saborizada",
+    descripcion: "Frutte Limnada",
+    marca: "SALUS",
+    precio: 110
 }
 ];
