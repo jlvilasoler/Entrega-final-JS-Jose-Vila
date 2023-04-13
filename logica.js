@@ -1,11 +1,11 @@
-//PRODUCTOS
 
+//PRODUCTOS - Renderizarmos los productos:
 console.log(productos);
 const carrito = [];
 let contenedor = document.getElementById("articulos");
 
-function renderizarProductos(){
-    for(const producto of productos){
+function renderizarProductos() {
+    for (const producto of productos) {
         contenedor.innerHTML += `
             <div class="card col-sm-2">
                 <img src=${producto.foto} class="card-img-top" xs alt="...">
@@ -19,26 +19,24 @@ function renderizarProductos(){
             </div>   
         `;
     }
-    
     //Eventos:
-productos.forEach((producto) =>  {document.getElementById(`btn${producto.id}`).addEventListener("click", function() {
+    productos.forEach((producto) => {
+        document.getElementById(`btn${producto.id}`).addEventListener("click", function () {
             agregarACarrito(producto);
-});
-});
+        });
+    });
 }
 
 renderizarProductos();
 
 
 
-//TABLA DE PRODUCTOS (CARRITO)
-function agregarACarrito(prodAAgregar){
+//TABLA DE PRODUCTOS - Funcion para agregar productos al carrito de compras:
+function agregarACarrito(prodAAgregar) {
     carrito.push(prodAAgregar);
     console.table(carrito);
     alert(`Agregaste 1un: \n\n${prodAAgregar.articulo} ${prodAAgregar.descripcion} ${prodAAgregar.marca} al carrito!`);
-
-
-    //Se agrega fila a la tabla (carrito):
+//Se agrega detalle de compra en filas en la tabla (carrito):
     document.getElementById("tablabody").innerHTML += `
     <tr>
     <td>${prodAAgregar.id}</td>
@@ -48,12 +46,7 @@ function agregarACarrito(prodAAgregar){
     <td>${prodAAgregar.precio}</td>
     </tr>
     `;
-
-
-
-
-
-  //hace la suma del total:
-let totalCarrito = carrito.reduce((acumulador,producto)=>acumulador+producto.precio, 0);
-document.getElementById("total").innerText = "TOTAL A PAGAR $: " + totalCarrito; 
+//SUMA TOTAL DE COMPRA - visualizamos el valor total que se llega gastado en el carrito:
+    let totalCarrito = carrito.reduce((acumulador, producto) => acumulador + producto.precio, 0);
+    document.getElementById("total").innerText = "TOTAL A PAGAR $: " + totalCarrito;
 }

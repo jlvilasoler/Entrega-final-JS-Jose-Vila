@@ -1,5 +1,5 @@
 const productos = [{
-    id: 1,
+    id: 60001,
     foto: "./img/Aguacongasnativa600ml.png",
     articulo: "Agua con gas",
     descripcion: "BT 600ml",
@@ -7,7 +7,7 @@ const productos = [{
     precio: 148
 },
 {
-    id: 2,
+    id: 60002,
     foto: "./img/DentalcleanHilodentalconcera130m.jpg",
     articulo: "Hilo Dental",
     descripcion: "Con cera 130m",
@@ -15,7 +15,7 @@ const productos = [{
     precio: 119
 },
 {
-    id: 3,
+    id: 60003,
     foto: "./img/EnjuagueBucalDENTALCLEANBlueDiamond-Mentasuave.jpg",
     articulo: "Enjuague Bucal",
     descripcion: "Blue Diamond",
@@ -23,7 +23,7 @@ const productos = [{
     precio: 250
 },
 {
-    id: 4,
+    id: 60004,
     foto: "./img/EnjuagueBucalDENTALCLEANGreenDiamond-HortelaSuave.jpg",
     articulo: "Enjuague Bucal",
     descripcion: "Green Diamond",
@@ -31,7 +31,7 @@ const productos = [{
     precio: 250
 },
 {
-    id: 5,
+    id: 60005,
     foto: "./img/CEPERASalsadeSoja150ml.jpg",
     articulo: "Salsa de Soja",
     descripcion: "150ml",
@@ -39,7 +39,7 @@ const productos = [{
     precio: 59
 },
 {
-    id: 6,
+    id: 60006,
     foto: "./img/CEPERASalsacalabresayPimienta150ml.jpg",
     articulo: "Salsa",
     descripcion: "Calabresa y Pimienta",
@@ -47,7 +47,7 @@ const productos = [{
     precio: 49
 },
 {
-    id: 7,
+    id: 60007,
     foto: "./img/MayonesaSalsayCebollaSinGluten.jpg",
     articulo: "Mayonesa",
     descripcion: "Salsa y Cebolla",
@@ -55,7 +55,7 @@ const productos = [{
     precio: 49
 },
 {
-    id: 8,
+    id: 60008,
     foto: "./img/CEPERASalsaInglesa150ml.jpg",
     articulo: "Salsa Inglesa",
     descripcion: "150ml",
@@ -63,7 +63,7 @@ const productos = [{
     precio: 49
 },
 {
-    id: 9,
+    id: 60009,
     foto: "./img/dulcedeleche-los-nietitos.png",
     articulo: "Dulce de leche",
     descripcion: "700g",
@@ -71,7 +71,7 @@ const productos = [{
     precio: 130
 },
 {
-    id: 10,
+    id: 60010,
     foto: "./img/cocacola1.jpg",
     articulo: "Coca Cola",
     descripcion: "Sabor Original 1.5L",
@@ -79,7 +79,7 @@ const productos = [{
     precio: 170
 },
 {
-    id: 11,
+    id: 60011,
     foto: "./img/Patricia340cc.png",
     articulo: "Cerveza",
     descripcion: "340cc",
@@ -87,7 +87,7 @@ const productos = [{
     precio: 100
 },
 {
-    id: 12,
+    id: 60012,
     foto: "./img/salusfrutte-limonada.png",
     articulo: "Agua Saborizada",
     descripcion: "Frutte Limnada",
