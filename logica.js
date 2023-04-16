@@ -2,12 +2,13 @@
 //PRODUCTOS - Renderizarmos los productos:
 console.log(productos);
 const carrito = [];
+
 let contenedor = document.getElementById("articulos");
 
 function renderizarProductos() {
     for (const producto of productos) {
         contenedor.innerHTML += `
-            <div class="card col-sm-2">
+            <div class="card col-md-4 col-lg-2 col-sm-6">
                 <img src=${producto.foto} class="card-img-top" xs alt="...">
                 <div class="card-body mx-auto">
                     <p class="card-text text-center fs-4">${producto.articulo}</p>
@@ -40,6 +41,7 @@ function agregarACarrito(prodAAgregar) {
     document.getElementById("tablabody").innerHTML += `
     <tr>
     <td>${prodAAgregar.id}</td>
+    <td>${prodAAgregar.cantidadCompra}</td>
     <td>${prodAAgregar.marca}</td>
     <td>${prodAAgregar.articulo}</td>
     <td>${prodAAgregar.descripcion}</td>
@@ -48,5 +50,23 @@ function agregarACarrito(prodAAgregar) {
     `;
 //SUMA TOTAL DE COMPRA - visualizamos el valor total que se llega gastado en el carrito:
     let totalCarrito = carrito.reduce((acumulador, producto) => acumulador + producto.precio, 0);
-    document.getElementById("total").innerText = "TOTAL A PAGAR $: " + totalCarrito;
+    document.getElementById("total").innerText = "Total a pagar : " + "$ " + totalCarrito;
+
+//CANTIDAD - visualizamos la cantidad total de articulos en el carrito: (FUNCION EN DESARROLLO)
+    let cant = carrito.reduce((acumulador, producto) => acumulador + producto.cantidadCompra, 0);
+    document.getElementById("cantidad").innerText = "Cantidad de Articulos: " + cant;
 }
+
+
+
+
+
+
+
+
+
+
+
+//FORMULARIO DE COMPRA:
+
+const email = document.getElementById("emailInput")

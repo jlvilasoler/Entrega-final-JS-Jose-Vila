@@ -4,7 +4,8 @@ const productos = [{
     articulo: "Agua con gas",
     descripcion: "BT 600ml",
     marca: "Nativa",
-    precio: 148
+    precio: 148.50,
+    cantidadCompra: 1
 },
 {
     id: 60002,
@@ -12,7 +13,8 @@ const productos = [{
     articulo: "Hilo Dental",
     descripcion: "Con cera 130m",
     marca: "DENTALCLEAN",
-    precio: 119
+    precio: 119.00,
+    cantidadCompra: 1
 },
 {
     id: 60003,
@@ -20,7 +22,8 @@ const productos = [{
     articulo: "Enjuague Bucal",
     descripcion: "Blue Diamond",
     marca: "DENTALCLEAN",
-    precio: 250
+    precio: 250.50,
+    cantidadCompra: 1
 },
 {
     id: 60004,
@@ -28,7 +31,8 @@ const productos = [{
     articulo: "Enjuague Bucal",
     descripcion: "Green Diamond",
     marca: "DENTALCLEAN",
-    precio: 250
+    precio: 250.00,
+    cantidadCompra: 1
 },
 {
     id: 60005,
@@ -36,7 +40,8 @@ const productos = [{
     articulo: "Salsa de Soja",
     descripcion: "150ml",
     marca: "CEPERA",
-    precio: 59
+    precio: 59.00,
+    cantidadCompra: 1
 },
 {
     id: 60006,
@@ -44,7 +49,8 @@ const productos = [{
     articulo: "Salsa",
     descripcion: "Calabresa y Pimienta",
     marca: "CEPERA",
-    precio: 49
+    precio: 49.00,
+    cantidadCompra: 1
 },
 {
     id: 60007,
@@ -52,7 +58,8 @@ const productos = [{
     articulo: "Mayonesa",
     descripcion: "Salsa y Cebolla",
     marca: "CEPERA",
-    precio: 49
+    precio: 49.00,
+    cantidadCompra: 1
 },
 {
     id: 60008,
@@ -60,7 +67,8 @@ const productos = [{
     articulo: "Salsa Inglesa",
     descripcion: "150ml",
     marca: "CEPERA",
-    precio: 49
+    precio: 49,
+    cantidadCompra: 1
 },
 {
     id: 60009,
@@ -68,7 +76,8 @@ const productos = [{
     articulo: "Dulce de leche",
     descripcion: "700g",
     marca: "LOS NIETITOS",
-    precio: 130
+    precio: 130.00,
+    cantidadCompra: 1
 },
 {
     id: 60010,
@@ -76,7 +85,8 @@ const productos = [{
     articulo: "Coca Cola",
     descripcion: "Sabor Original 1.5L",
     marca: "COCA COLA",
-    precio: 170
+    precio: 170.00,
+    cantidadCompra: 1
 },
 {
     id: 60011,
@@ -84,7 +94,8 @@ const productos = [{
     articulo: "Cerveza",
     descripcion: "340cc",
     marca: "PATRICIA",
-    precio: 100
+    precio: 100.00,
+    cantidadCompra: 1
 },
 {
     id: 60012,
@@ -92,6 +103,7 @@ const productos = [{
     articulo: "Agua Saborizada",
     descripcion: "Frutte Limnada",
     marca: "SALUS",
-    precio: 110
+    precio: 110.00,
+    cantidadCompra: 1
 }
 ];
