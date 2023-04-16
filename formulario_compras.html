@@ -88,21 +88,21 @@
     </section>
 
     <section class="formulario-info">
-        <form class="row">
+        <form id="form" class="row">
 
             <div class="col-5">
                 <label for="documentoInput" class="form-label"></label>
-                <input type="documentoCompleto" class="form-control" id="documentoCompletoInput"
+                <input type="documento" class="form-control" id="documentoInput"
                     placeholder="Número de Documento:">
             </div>
 
             <div class="col-5">
                 <label for="emailInput" class="form-label"></label>
-                <input type="email" class="form-control" id="emailInput" placeholder="Email:">
+                <input type="email" class="form-control" id="emailInput" placeholder="email:">
             </div>
 
             <div class="col-5">
-                <label for="NombreCompletoInput" class="form-label"></label>
+                <label for="nombreCompletoInput" class="form-label"></label>
                 <input type="nombreCompleto" class="form-control" id="nombreCompletoInput"
                     placeholder="Nombre Completo:">
             </div>
@@ -136,14 +136,14 @@
 
 
             <div class="col-4">
-                <label for="NombreCompletoInput" class="form-label"></label>
-                <input type="nombreCompleto" class="form-control" id="nombreCompletoInput"
+                <label for="nombreTarjetaInput" class="form-label"></label>
+                <input type="nombreTarjeta" class="form-control" id="nombreTarjetaInput"
                     placeholder="Nombre Completo:">
             </div>
 
             <div class="col-4">
-                <label for="apellidosInput" class="form-label"></label>
-                <input type="apellidosCompleto" class="form-control" id="apellidosCompletoInput"
+                <label for="apellidosTarjetaInput" class="form-label"></label>
+                <input type="apellidosTarjeta" class="form-control" id="apellidosTarjetaInput"
                     placeholder="Apellidos:">
             </div>
 
@@ -168,7 +168,7 @@
 
 
             <div class="col-3 py-3">
-                <select class="form-select form-select-md" aria-label=".form-select-lg example">
+                <select class="form-select form-select-md" id="institucionBancaria" aria-label=".form-select-lg example">
                     <option selected>Selecciona el Banco:</option>
                     <option value="1">BANCO ITAÚ</option>
                     <option value="2">BANCO SANTANDER</option>
@@ -178,11 +178,12 @@
                     <option value="6">PRESS</option>
                     <option value="7">MI DINERO</option>
                     <option value="8">BINANCE PAY USDT</option>
+                    <option value="9">OTROS</option>
                 </select>
             </div>
 
             <div class="col-3 py-2">
-                <select class="form-select form-select-md" aria-label=".form-select-lg example">
+                <select class="form-select form-select-md" id="medioPago" aria-label=".form-select-lg example">
                     <option selected>Tipo de Tarjeta:</option>
                     <option value="A">TARJETA DE CREDITO</option>
                     <option value="B">TARJETA DE DEBITO</option>
@@ -212,7 +213,7 @@
 
             <div class="col-4">
                 <label for="departamentoInput" class="form-label"></label>
-                <input type="departamento" class="form-control" id="CiudadEnvioInput" placeholder="Departamento:">
+                <input type="departamento" class="form-control" id="departamentoEnvioInput" placeholder="Departamento:">
             </div>
 
             <div class="col-4">
@@ -220,6 +221,12 @@
                 <input type="codigoPostal" class="form-control" id="codigoPostalInput"
                     placeholder="Código Postal de envío:">
             </div>
+
+
+        <section>
+            <button class="boton-enviar" type="submit">CONFIRMAR PAGO</button>
+        </section>
+
         </form>
         </div>
 

@@ -28,8 +28,9 @@ function renderizarProductos() {
     });
 }
 
+if(contenedor){
 renderizarProductos();
-
+}
 
 
 //TABLA DE PRODUCTOS - Funcion para agregar productos al carrito de compras:
@@ -57,16 +58,99 @@ function agregarACarrito(prodAAgregar) {
     document.getElementById("cantidad").innerText = "Cantidad de Articulos: " + cant;
 }
 
+/*
+//BOTON IR AL CARRITO DE COMPRAS PARA COMPRAR
+const pagar = document.getElementById("pagar");
+
+pagar.addEventListener("click", agregarACarrito);
+
+function agregarACarrito(){
+    carrito.push(producto);
+    console.table(carrito);
+}
 
 
-
-
-
-
-
-
+*/
 
 
 //FORMULARIO DE COMPRA:
 
-const email = document.getElementById("emailInput")
+//Numero de documento
+const documentInput = document.getElementById("documentoInput");
+const documento = documentInput.value;
+
+console.log(documento)
+
+
+//email
+const emailInput = document.getElementById("emailInput");
+const email = emailInput.value;
+
+//Nombre Completo
+const nombreCompletoInput = document.getElementById("nombreCompletoInput");
+const nombreCompleto = nombreCompletoInput.value;
+
+//Apellidos
+const apellidosInput = document.getElementById("apellidosInput");
+const apellidosCompleto = apellidosCompletoInput.value;
+
+//Telefono
+const telefonoInput = document.getElementById("telefonoInput");
+const telefono = telefonoInput.value;
+
+//Celular
+const celularInput = document.getElementById("celularInput");
+const celular = celularInput.value;
+
+
+
+//TARJETA
+//Nombre Tarjeta
+const nombreTarjetaInput = document.getElementById("nombreTarjetaInput");
+const nombreTarjeta = nombreTarjetaInput.value;
+
+
+
+
+
+
+
+
+
+const formulario = document.getElementById("form");
+
+formulario.addEventListener("submit", (e) => {
+    e.preventDefault()
+
+    console.log("formulario enviado")
+    console.log("Documento:", documentInput.value)
+    console.log("Email:", emailInput.value)
+    console.log("Nombre Completo:", nombreCompletoInput.value)
+    console.log("Apellidos:", apellidosCompletoInput.value)
+    console.log("Telefono:", telefonoInput.value)
+    console.log("celular:", celularInput.value)
+
+    console.log("Nombre Tarjeta:", nombreTarjetaInput.value)
+    console.log("Apellidos Tarjeta:", apellidosTarjetaInput.value)
+    console.log("Número Tarjeta:", numeroTarjetaInput.value)
+    console.log("Codigo Tarjeta:", codigoInput.value)
+    console.log("Fecha de Vencimiento Tarjeta:", fechaValidezInput.value)
+    console.log("Institución Bancaria:", institucionBancaria.value)
+    console.log("Medio de pago:", medioPago.value)
+
+    console.log("Dirección Envío:", direccionEnvioInput.value)
+    console.log("Ciudad Envío:", ciudadEnvioInput.value)
+    console.log("Departamento Envío:", departamentoEnvioInput.value)
+    console.log("Codigo Postal:", codigoPostalInput.value)
+})
+
+
+
+/*
+const expresiones = {
+	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	password: /^.{4,12}$/, // 4 a 12 digitos.
+	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+}*/

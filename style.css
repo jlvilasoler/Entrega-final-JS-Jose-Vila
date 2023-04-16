@@ -273,5 +273,22 @@ h2 {
   align-content: center;
   align-items: center;
   text-align: center;
-  
+
 }
+
+
+.boton-enviar {
+  width: 200px;
+  height: 50px;
+  background-color: #296311;
+  color: white;
+  border-radius: 9px;
+  border-color: #717070;
+}
+
+.boton-enviar:hover {
+  background-color: #6ace38;
+  transition: 0.3s;
+}
+
+
