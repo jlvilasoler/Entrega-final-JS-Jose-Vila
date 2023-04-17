@@ -1,7 +1,7 @@
 
 //PRODUCTOS - Renderizarmos los productos:
 console.log(productos);
-const carrito = [];
+const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 let contenedor = document.getElementById("articulos");
 

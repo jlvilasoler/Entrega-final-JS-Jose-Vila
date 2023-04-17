@@ -1,3 +1,7 @@
+//CARRITO GET ITEM
+const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+
 
 //FORMULARIO DE COMPRA:
 
@@ -239,6 +243,3 @@ const expresiones = {
 }*/
 
 
-//CARRITO
-const carrito = JSON.parse(localStorage.getItem("carrito"));
-console.log(carrito);
