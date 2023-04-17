@@ -53,7 +53,7 @@ function agregarACarrito(prodAAgregar) {
     let totalCarrito = carrito.reduce((acumulador, producto) => acumulador + producto.precio, 0);
     document.getElementById("total").innerText = "Total a pagar : " + "$ " + totalCarrito;
 
-//CANTIDAD - visualizamos la cantidad total de articulos en el carrito: (FUNCION EN DESARROLLO)
+//CANTIDAD - visualizamos la cantidad total de articulos en el carrito:
     let cant = carrito.reduce((acumulador, producto) => acumulador + producto.cantidadCompra, 0);
     document.getElementById("cantidad").innerText = "Cantidad de Articulos: " + cant;
 }
@@ -154,3 +154,157 @@ const expresiones = {
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
 }*/
+
+
+
+
+
+//EVENTOS DEL TECLADO - FORMULARIO INFORMACIÓN:
+//Campo Número Documento
+documentInput.oninput = () => {
+    if(isNaN(documentInput.value)){
+        //si no es un numero
+        documentInput.style.color='red';
+    }else{
+        //si es un numero
+        documentInput.style.color = 'black';
+    }
+}
+
+//Campo Apellidos
+apellidosCompletoInput.oninput = () => {
+    if(isNaN(apellidosCompletoInput.value)){
+        //si no es un numero
+        apellidosCompletoInput.style.color='black';
+    }else{
+        //si es un numero
+        apellidosCompletoInput.style.color = 'red';
+    }
+}
+
+//Campo Nombre
+nombreCompletoInput.oninput = () => {
+    if(isNaN(nombreCompletoInput.value)){
+        //si no es un numero
+        nombreCompletoInput.style.color='black';
+    }else{
+        //si es un numero
+        nombreCompletoInput.style.color = 'red';
+    }
+}
+
+//Campo Telefono
+telefonoInput.oninput = () => {
+    if(isNaN(telefonoInput.value)){
+        //si no es un numero
+        telefonoInput.style.color='red';
+    }else{
+        //si es un numero
+        telefonoInput.style.color = 'black';
+    }
+}
+
+//Campo Celular
+celularInput.oninput = () => {
+    if(isNaN(celularInput.value)){
+        //si no es un numero
+        celularInput.style.color='red';
+    }else{
+        //si es un numero
+        celularInput.style.color = 'black';
+    }
+}
+
+
+//EVENTOS DEL TECLADO - FORMULARIO PAGO:
+
+//Campo Nombre Terjeta
+nombreTarjetaInput.oninput = () => {
+    if(isNaN(nombreTarjetaInput.value)){
+        //si no es un numero
+        nombreTarjetaInput.style.color='black';
+    }else{
+        //si es un numero
+        nombreTarjetaInput.style.color = 'red';
+    }
+}
+
+//Campo Apellidos Tarjeta
+apellidosTarjetaInput.oninput = () => {
+    if(isNaN(apellidosTarjetaInput.value)){
+        //si no es un numero
+        apellidosTarjetaInput.style.color='black';
+    }else{
+        //si es un numero
+        apellidosTarjetaInput.style.color = 'red';
+    }
+}
+
+//Numero de Tarjeta 16 Digitos
+numeroTarjetaInput.oninput = () => {
+    if(isNaN(numeroTarjetaInput.value)){
+        //si no es un numero
+        numeroTarjetaInput.style.color='red';
+    }else{
+        //si es un numero
+        numeroTarjetaInput.style.color = 'black';
+    }
+}
+
+//Codigo 3 digitos (acepta solo numeros)
+codigoInput.oninput = () => {
+    if(isNaN(codigoInput.value)){
+        //si no es un numero
+        codigoInput.style.color='red';
+    }else{
+        //si es un numero
+        codigoInput.style.color = 'black';
+    }
+}
+
+
+
+
+//Dirección Envío
+direccionEnvioInput.oninput = () => {
+    if(isNaN(direccionEnvioInput.value)){
+        //si no es un numero
+        direccionEnvioInput.style.color='black';
+    }else{
+        //si es un numero
+        direccionEnvioInput.style.color = 'red';
+    }
+}
+
+//Ciudad Envío
+ciudadEnvioInput.oninput = () => {
+    if(isNaN(ciudadEnvioInput.value)){
+        //si no es un numero
+        ciudadEnvioInput.style.color='black';
+    }else{
+        //si es un numero
+        ciudadEnvioInput.style.color = 'red';
+    }
+}
+
+//Departamento Envío
+departamentoEnvioInput.oninput = () => {
+    if(isNaN(departamentoEnvioInput.value)){
+        //si no es un numero
+        departamentoEnvioInput.style.color='black';
+    }else{
+        //si es un numero
+        departamentoEnvioInput.style.color = 'red';
+    }
+}
+
+//Codigo Postal
+codigoPostalInput.oninput = () => {
+    if(isNaN(codigoPostalInput.value)){
+        //si no es un numero
+        codigoPostalInput.style.color='red';
+    }else{
+        //si es un numero
+        codigoPostalInput.style.color = 'black';
+    }
+}
