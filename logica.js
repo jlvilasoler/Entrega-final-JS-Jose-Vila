@@ -123,6 +123,7 @@ formulario.addEventListener("submit", (e) => {
     e.preventDefault()
 
     console.log("formulario enviado")
+    alert("Estamos preparando su compra"+"\n\nEn breve entraremos en comunicación con usted"+"\n\nCualquier consulta puede comunicarse con nostros a través del 0900-0101 o a través del email contacto@tiendaonline.uy" + "\n\nMuchas gracias...")
     console.log("Documento:", documentInput.value)
     console.log("Email:", emailInput.value)
     console.log("Nombre Completo:", nombreCompletoInput.value)
@@ -146,14 +147,7 @@ formulario.addEventListener("submit", (e) => {
 
 
 
-/*
-const expresiones = {
-	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	password: /^.{4,12}$/, // 4 a 12 digitos.
-	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
-}*/
+
 
 
 
@@ -218,7 +212,7 @@ celularInput.oninput = () => {
 
 //EVENTOS DEL TECLADO - FORMULARIO PAGO:
 
-//Campo Nombre Terjeta
+//Campo Nombre Tarjeta
 nombreTarjetaInput.oninput = () => {
     if(isNaN(nombreTarjetaInput.value)){
         //si no es un numero
@@ -308,3 +302,15 @@ codigoPostalInput.oninput = () => {
         codigoPostalInput.style.color = 'black';
     }
 }
+
+/*
+const expresiones = {
+	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	password: /^.{4,12}$/, // 4 a 12 digitos.
+	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+}*/
+
+
+
