@@ -3,8 +3,42 @@ const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 
 
-//FORMULARIO DE COMPRA:
 
+//RESUMEN TOTAL COMPRA ARRIBA A LA DERECHA (Cambiamos resumen por JS)
+
+
+let cantart = document.getElementById("cantidad");
+cantart.innerHTML = "Cantidad articulos:";
+
+
+let total = document.getElementById("total");
+total.innerHTML = "Total a pagar:";
+
+
+
+
+/*
+//SUMA TOTAL DE COMPRA - visualizamos el valor total que se llega gastado en el carrito:
+let totalCarrito = carrito.reduce((acumulador, producto) => acumulador + producto.precio, 0);
+document.getElementById("total").innerText = "Total a pagar : " + "$ " + JSON.parse(localStorage.getItem("totalcarrito.totalCarrito"));
+*/
+
+//JSON.parse(localStorage.getItem("totalcarrito.totalCarrito"))
+
+
+//CANTIDAD - visualizamos la cantidad total de articulos en el carrito:
+let cant = carrito.reduce((acumulador, producto) => acumulador + producto.cantidadCompra, 0);
+document.getElementById("cantidad").innerText = "Cantidad de Articulos: " + cant;
+
+//SUMA TOTAL DE COMPRA - visualizamos la cantidad total de articulos en el carrito:
+let totalCarrito = carrito.reduce((acumulador, producto) => acumulador + producto.precio, 0);
+document.getElementById("total").innerText = "Total a pagar : " + "$ " + totalCarrito;
+
+
+
+
+
+//FORMULARIO DE COMPRA:
 //Numero de documento
 const documentInput = document.getElementById("documentoInput");
 const documento = documentInput.value;
@@ -54,6 +88,7 @@ formulario.addEventListener("submit", (e) => {
 
     console.log("formulario enviado")
     alert("Estamos preparando su compra"+"\n\nEn breve entraremos en comunicación con usted"+"\n\nCualquier consulta puede comunicarse con nostros a través del 0900-0101 o a través del email contacto@tiendaonline.uy" + "\n\nMuchas gracias...")
+    window.location.href='./index.html'
     console.log("Documento:", documentInput.value)
     console.log("Email:", emailInput.value)
     console.log("Nombre Completo:", nombreCompletoInput.value)
@@ -232,14 +267,4 @@ codigoPostalInput.oninput = () => {
         codigoPostalInput.style.color = 'black';
     }
 }
-
-/*
-const expresiones = {
-	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	password: /^.{4,12}$/, // 4 a 12 digitos.
-	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
-}*/
-
 

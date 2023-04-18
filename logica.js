@@ -1,6 +1,10 @@
 
 //PRODUCTOS - Renderizarmos los productos:
 console.log(productos);
+
+// Elimina todos los elementos
+localStorage.clear();
+
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 let contenedor = document.getElementById("articulos");
@@ -63,9 +67,33 @@ localStorage.setItem("carrito", JSON.stringify(carrito))
 //CANTIDAD - visualizamos la cantidad total de articulos en el carrito:
     let cant = carrito.reduce((acumulador, producto) => acumulador + producto.cantidadCompra, 0);
     document.getElementById("cantidad").innerText = "Cantidad de Articulos: " + cant;
+
+
+//CANTIDAD
+localStorage.setItem("cantidad-formulario", JSON.stringify({totalCarrito:totalCarrito, cant:cant}));
 }
 
 
 
 
 
+
+
+
+//Boton Enviar
+
+var botonenviar = document.getElementById("boton-enviar")
+botonenviar.addEventListener("click" , clickeo)
+
+function clickeo(){
+    alert("Ya falta poco, a continuación procederemos al pago")
+    window.location.href='./formulario_compras.html'
+
+}
+
+
+
+//
+
+
+//"window.location.href='./formulario_compras.html'"
