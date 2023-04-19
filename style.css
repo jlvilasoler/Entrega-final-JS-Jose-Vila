@@ -292,3 +292,22 @@ h2 {
 }
 
 
+.boton-borrar {
+  width: 130px;
+  height: 25px;
+  background-color: #ab300b;
+  color: white;
+  border-radius: 9px;
+  border-color: #717070;
+
+}
+
+.boton-borrar:hover {
+  background-color: #d46a23;
+  transition: 0.3s;
+}
+
+
+.boton-izquierda {
+  float: left;
+}

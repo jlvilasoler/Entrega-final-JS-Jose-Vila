@@ -48,10 +48,10 @@ function agregarACarrito(prodAAgregar) {
         text: `\n\n${prodAAgregar.articulo} ${prodAAgregar.descripcion} ${prodAAgregar.marca}`,
         imageUrl: `${prodAAgregar.foto}`,
         imageWidth: 180,
-        imageHeight: 150,
+        imageHeight: 200,
         imageAlt: `\n\n${prodAAgregar.articulo} ${prodAAgregar.descripcion} ${prodAAgregar.marca}`,
         showConfirmButton: false,
-        timer: 2000,
+        timer: 1000,
       })
 
     //Storage - set item
