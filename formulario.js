@@ -56,7 +56,7 @@ const nombreCompleto = nombreCompletoInput.value;
 
 //Apellidos
 const apellidosInput = document.getElementById("apellidosInput");
-const apellidosCompleto = apellidosCompletoInput.value;
+const apellidosCompleto = apellidosInput.value;
 
 //Telefono
 const telefonoInput = document.getElementById("telefonoInput");
@@ -73,9 +73,45 @@ const celular = celularInput.value;
 const nombreTarjetaInput = document.getElementById("nombreTarjetaInput");
 const nombreTarjeta = nombreTarjetaInput.value;
 
+//Apellidos Tarjeta
+const apellidosTarjetaInput = document.getElementById("apellidosTarjetaInput");
+const apellidosTarjeta = apellidosTarjetaInput.value;
 
+//Num Tarjeta
+const numeroTarjetaInput = document.getElementById("numeroTarjetaInput");
+const numeroTarjeta = numeroTarjetaInput.value;
 
+//Cod Tarjeta
+const codigoInput = document.getElementById("codigoInput");
+const codigo = codigoInput.value;
 
+//Fecha Val Tarjeta
+const fechaValidezInput = document.getElementById("fechaValidezInput");
+const fechaValidez = fechaValidezInput.value;
+
+// Institucion Bancaria Tarjeta
+const institucionBancaria = document.getElementById("institucionBancaria");
+const institucionBanco = institucionBancaria.value;
+
+// Medio de Pago Tarjeta
+const medioPago = document.getElementById("medioPago");
+const medioP = medioPago.value;
+
+// Direccion Envio
+const direccionEnvioInput = document.getElementById("direccionEnvioInput");
+const direccionEnvio = direccionEnvioInput.value;
+
+// Ciudad Envio
+const ciudadEnvioInput = document.getElementById("ciudadEnvioInput");
+const ciudadEnvio = ciudadEnvioInput.value;
+
+// Departamento Envio
+const departamentoEnvioInput = document.getElementById("departamentoEnvioInput");
+const departamentoEnvio = departamentoEnvioInput.value;
+
+// Codigo Postal Envio
+const codigoPostalInput = document.getElementById("codigoPostalInput");
+const codigoPostal = codigoPostalInput.value;
 
 
 
@@ -87,12 +123,28 @@ formulario.addEventListener("submit", (e) => {
     e.preventDefault()
 
     console.log("formulario enviado")
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Compra Exitosa!',
+        text: 'Ya estamos preparando su perdido, en un maximo de 24hs estaremos en su casa. \nGracias!',
+        showConfirmButton: false,
+        timer: 2500
+      }).then((result) => {
+        if (result) {
+            window.location.href='./index.html';
+        }
+      });
+
+
+
+/*
     alert("Estamos preparando su compra"+"\n\nEn breve entraremos en comunicación con usted"+"\n\nCualquier consulta puede comunicarse con nostros a través del 0900-0101 o a través del email contacto@tiendaonline.uy" + "\n\nMuchas gracias...")
-    window.location.href='./index.html'
+    window.location.href='./index.html'*/
     console.log("Documento:", documentInput.value)
     console.log("Email:", emailInput.value)
     console.log("Nombre Completo:", nombreCompletoInput.value)
-    console.log("Apellidos:", apellidosCompletoInput.value)
+    console.log("Apellidos:", apellidosInput.value)
     console.log("Telefono:", telefonoInput.value)
     console.log("celular:", celularInput.value)
 
@@ -131,13 +183,13 @@ documentInput.oninput = () => {
 }
 
 //Campo Apellidos
-apellidosCompletoInput.oninput = () => {
-    if(isNaN(apellidosCompletoInput.value)){
+apellidosInput.oninput = () => {
+    if(isNaN(apellidosInput.value)){
         //si no es un numero
-        apellidosCompletoInput.style.color='black';
+        apellidosInput.style.color='black';
     }else{
         //si es un numero
-        apellidosCompletoInput.style.color = 'red';
+        apellidosInput.style.color = 'red';
     }
 }
 

@@ -21,6 +21,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
+    <!--SWEETALERT-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!--CONEXION A CSS-->
     <link rel="stylesheet" href="style.css">
 
@@ -89,11 +92,11 @@
 
     <section>
         <thead>
-        <table class="table table-dark table-sm">
-            <h2 id="cantidad">Cantidad articulos:</h2>
-            <h2 id="total">Total a pagar:</h2>
+            <table class="table table-dark table-sm">
+                <h2 id="cantidad">Cantidad articulos:</h2>
+                <h2 id="total">Total a pagar:</h2>
         </thead>
-        </section>
+    </section>
 
     <section class="titulo-formulario">
         <h3>INGRESE SU INFORMACIÓN:</h3>
@@ -104,8 +107,7 @@
 
             <div class="col-5">
                 <label for="documentoInput" class="form-label"></label>
-                <input type="documento" class="form-control" id="documentoInput"
-                    placeholder="Número de Documento:">
+                <input type="documento" class="form-control" id="documentoInput" placeholder="Número de Documento:">
             </div>
 
             <div class="col-5">
@@ -121,8 +123,7 @@
 
             <div class="col-5">
                 <label for="apellidosInput" class="form-label"></label>
-                <input type="apellidosCompleto" class="form-control" id="apellidosCompletoInput"
-                    placeholder="Apellidos:">
+                <input type="apellidos" class="form-control" id="apellidosInput" placeholder="Apellidos:">
             </div>
 
             <div class="col-5">
@@ -149,14 +150,12 @@
 
             <div class="col-4">
                 <label for="nombreTarjetaInput" class="form-label"></label>
-                <input type="nombreTarjeta" class="form-control" id="nombreTarjetaInput"
-                    placeholder="Nombre Completo:">
+                <input type="nombreTarjeta" class="form-control" id="nombreTarjetaInput" placeholder="Nombre Completo:">
             </div>
 
             <div class="col-4">
                 <label for="apellidosTarjetaInput" class="form-label"></label>
-                <input type="apellidosTarjeta" class="form-control" id="apellidosTarjetaInput"
-                    placeholder="Apellidos:">
+                <input type="apellidosTarjeta" class="form-control" id="apellidosTarjetaInput" placeholder="Apellidos:">
             </div>
 
             <div class="col-4">
@@ -180,7 +179,8 @@
 
 
             <div class="col-3 py-3">
-                <select class="form-select form-select-md" id="institucionBancaria" aria-label=".form-select-lg example">
+                <select class="form-select form-select-md" id="institucionBancaria"
+                    aria-label=".form-select-lg example">
                     <option selected>Selecciona el Banco:</option>
                     <option value="1">BANCO ITAÚ</option>
                     <option value="2">BANCO SANTANDER</option>
@@ -235,9 +235,9 @@
             </div>
 
 
-        <section>
-            <button class="boton-enviar" type="submit">CONFIRMAR PAGO</button>
-        </section>
+            <section>
+                <button class="boton-enviar" type="submit">CONFIRMAR PAGO</button>
+            </section>
 
         </form>
         </div>

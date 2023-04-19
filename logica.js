@@ -41,8 +41,20 @@ renderizarProductos();
 function agregarACarrito(prodAAgregar) {
     carrito.push(prodAAgregar);
     console.table(carrito);
-    alert(`Agregaste 1un: \n\n${prodAAgregar.articulo} ${prodAAgregar.descripcion} ${prodAAgregar.marca} al carrito!`);
-//Storage - set item
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Agregaste 1un:',
+        text: `\n\n${prodAAgregar.articulo} ${prodAAgregar.descripcion} ${prodAAgregar.marca}`,
+        imageUrl: `${prodAAgregar.foto}`,
+        imageWidth: 180,
+        imageHeight: 150,
+        imageAlt: `\n\n${prodAAgregar.articulo} ${prodAAgregar.descripcion} ${prodAAgregar.marca}`,
+        showConfirmButton: false,
+        timer: 2000,
+      })
+
+    //Storage - set item
 
 localStorage.setItem("carrito", JSON.stringify(carrito))
 
@@ -82,14 +94,34 @@ localStorage.setItem("cantidad-formulario", JSON.stringify({totalCarrito:totalCa
 
 //Boton Enviar
 
-var botonenviar = document.getElementById("boton-enviar")
-botonenviar.addEventListener("click" , clickeo)
+var botonenviar = document.getElementById("btn-enviar");
 
-function clickeo(){
-    alert("Ya falta poco, a continuación procederemos al pago")
-    window.location.href='./formulario_compras.html'
+botonenviar.addEventListener("click", clickeo);
 
+function clickeo() {
+  if (carrito < 1) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Debes seleccionar los articulos para seguir con tu compra',
+      showConfirmButton: false,
+      timer: 1500,
+    })
+  } else {
+    Swal.fire({
+      icon: 'success',
+      title: 'Compra Exitosa!',
+      text: 'Ya falta poco, a continuación procederemos al pago',
+      showConfirmButton: false,
+      timer: 1500
+    }).then((result) => {
+      if (result) {
+        window.location.href = './formulario_compras.html';
+      }
+    });
+  }
 }
+
 
 
 
