@@ -41,6 +41,7 @@ if (contenedor) {
 }
 
 
+
 //TABLA DE PRODUCTOS - Funcion para agregar productos al carrito de compras:
 function agregarACarrito(prodAAgregar) {
     carrito.push(prodAAgregar);
@@ -75,6 +76,9 @@ function agregarACarrito(prodAAgregar) {
     <td>${prodAAgregar.precio}</td>
     </tr>
     `;
+
+
+
 //SUMA TOTAL DE COMPRA - visualizamos el valor total que se llega gastado en el carrito:
     let totalCarrito = carrito.reduce((acumulador, producto) => acumulador + producto.precio, 0);
     document.getElementById("total").innerText = "Total a pagar : " + "$ " + totalCarrito;

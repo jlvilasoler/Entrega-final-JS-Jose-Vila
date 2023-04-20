@@ -101,7 +101,7 @@ const productos = [{
     id: 60012,
     foto: "./img/salusfrutte-limonada.png",
     articulo: "Agua Saborizada",
-    descripcion: "Frutte Limnada",
+    descripcion: "Frutte Limonada 1L",
     marca: "SALUS",
     precio: 110.00,
     cantidadCompra: 1
