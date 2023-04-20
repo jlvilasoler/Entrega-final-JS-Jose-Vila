@@ -7,8 +7,11 @@ localStorage.clear();
 
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+
+// Traemos el ID articulos del index.html
 let contenedor = document.getElementById("articulos");
 
+// Recorremos el array de productos e inyectamos los datos de cada producto
 function renderizarProductos() {
     for (const producto of productos) {
         contenedor.innerHTML += `
@@ -24,7 +27,8 @@ function renderizarProductos() {
             </div>   
         `;
     }
-    //Eventos:
+
+//Eventos:
     productos.forEach((producto) => {
         document.getElementById(`btn${producto.id}`).addEventListener("click", function () {
             agregarACarrito(producto);
@@ -32,8 +36,8 @@ function renderizarProductos() {
     });
 }
 
-if(contenedor){
-renderizarProductos();
+if (contenedor) {
+    renderizarProductos();
 }
 
 
@@ -41,7 +45,7 @@ renderizarProductos();
 function agregarACarrito(prodAAgregar) {
     carrito.push(prodAAgregar);
     console.table(carrito);
-
+//Cartel aviso producto agrregado:
     Swal.fire({
         icon: 'success',
         title: 'Agregaste 1un:',
@@ -52,16 +56,15 @@ function agregarACarrito(prodAAgregar) {
         imageAlt: `\n\n${prodAAgregar.articulo} ${prodAAgregar.descripcion} ${prodAAgregar.marca}`,
         showConfirmButton: false,
         timer: 1000,
-      })
+    })
 
-    //Storage - set item
-
-localStorage.setItem("carrito", JSON.stringify(carrito))
-
+//Storage - set item
+    localStorage.setItem("carrito", JSON.stringify(carrito))
 
 
 
-    //Se agrega detalle de compra en filas en la tabla (carrito):
+
+//Se agrega detalle de compra en filas en la tabla (carrito):
     document.getElementById("tablabody").innerHTML += `
     <tr>
     <td>${prodAAgregar.id}</td>
@@ -81,8 +84,8 @@ localStorage.setItem("carrito", JSON.stringify(carrito))
     document.getElementById("cantidad").innerText = "Cantidad de Articulos: " + cant;
 
 
-//CANTIDAD
-localStorage.setItem("cantidad-formulario", JSON.stringify({totalCarrito:totalCarrito, cant:cant}));
+//CANTIDAD A LOCALSTORAGE:
+    localStorage.setItem("cantidad-formulario", JSON.stringify({ totalCarrito: totalCarrito, cant: cant }));
 }
 
 
@@ -99,27 +102,27 @@ var botonenviar = document.getElementById("btn-enviar");
 botonenviar.addEventListener("click", clickeo);
 
 function clickeo() {
-  if (carrito < 1) {
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'Debes seleccionar los articulos para seguir con tu compra',
-      showConfirmButton: false,
-      timer: 1500,
-    })
-  } else {
-    Swal.fire({
-      icon: 'success',
-      title: 'Compra Exitosa!',
-      text: 'Ya falta poco, a continuación procederemos al pago',
-      showConfirmButton: false,
-      timer: 1500
-    }).then((result) => {
-      if (result) {
-        window.location.href = './formulario_compras.html';
-      }
-    });
-  }
+    if (carrito < 1) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Debes seleccionar los articulos para seguir con tu compra',
+            showConfirmButton: false,
+            timer: 1500,
+        })
+    } else {
+        Swal.fire({
+            icon: 'success',
+            title: 'Ya falta poco!',
+            text: 'A continuación procederemos al pago...',
+            showConfirmButton: false,
+            timer: 1500
+        }).then((result) => {
+            if (result) {
+                window.location.href = './formulario_compras.html';
+            }
+        });
+    }
 }
 
 

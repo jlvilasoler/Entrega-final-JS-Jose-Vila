@@ -293,17 +293,18 @@ h2 {
 
 
 .boton-borrar {
-  width: 88px;
-  height: 20px;
-  background-color: #ab300b;
-  color: white;
-  border-radius: 6px;
+  width: 100px;
+  height:25px;
+  background-color: #ffffff;
+  color: rgb(163, 22, 22);
+  border-radius: 5px;
   border-color: #717070;
   font-size: 10px;
 }
 
 .boton-borrar:hover {
-  background-color: #d46a23;
+  background-color: #8b0e0e;
+  color: rgb(245, 244, 244);
   transition: 0.3s;
 }
 
@@ -316,7 +317,7 @@ h2 {
 .boton-inicio {
   width: 100px;
   height: 50px;
-  background-color: #1e1d1d;
+  background-color: #74340f;
   color: white;
   border-radius: 9px;
   border-color: #717070;
@@ -332,7 +333,7 @@ h2 {
 .boton-reset {
   width: 154px;
   height: 40px;
-  background-color: #212121;
+  background-color: #423d0c;
   color: white;
   border-radius: 9px;
   border-color: #717070;

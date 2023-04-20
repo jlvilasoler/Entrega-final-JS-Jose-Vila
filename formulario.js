@@ -129,14 +129,12 @@ formulario.addEventListener("submit", (e) => {
         title: 'Compra Exitosa!',
         text: 'Ya estamos preparando su perdido, en un maximo de 24hs estaremos en su casa. \nGracias!',
         showConfirmButton: false,
-        timer: 2500
+        timer: 2000
       }).then((result) => {
         if (result) {
             window.location.href='./index.html';
         }
       });
-
-
 
 /*
     alert("Estamos preparando su compra"+"\n\nEn breve entraremos en comunicación con usted"+"\n\nCualquier consulta puede comunicarse con nostros a través del 0900-0101 o a través del email contacto@tiendaonline.uy" + "\n\nMuchas gracias...")
