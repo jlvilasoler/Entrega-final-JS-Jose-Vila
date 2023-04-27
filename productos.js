@@ -3,7 +3,7 @@ const productos = [{
     foto: "./img/Aguacongasnativa600ml.png",
     articulo: "Agua con gas",
     descripcion: "BT 600ml",
-    marca: "Nativa",
+    marca: "NATIVA",
     precio: 148.50,
     cantidadCompra: 1
 },
@@ -107,3 +107,21 @@ const productos = [{
     cantidadCompra: 1
 }
 ];
+
+
+
+
+
+
+
+/*
+let prodBuscado = prompt("INGRESA EL ARTICULO Y VERÉ SI SE ENCUENTRA EN LA LISTA:");
+let productoEncontrado = productos.filter((producto) => producto.marca.toLowerCase().includes(prodBuscado.toLowerCase()));
+console.log(productoEncontrado)
+
+if(productoEncontrado.length > 0){
+    console.log("Producto encontrado")
+}else{
+   console.log("Producto no encontrado")
+}
+*/

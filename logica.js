@@ -1,15 +1,17 @@
-
 //PRODUCTOS - Renderizarmos los productos:
 console.log(productos);
 
 // Elimina todos los elementos
 localStorage.clear();
 
-const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 // Traemos el ID articulos del index.html
 let contenedor = document.getElementById("articulos");
+
+
+
+
 
 // Recorremos el array de productos e inyectamos los datos de cada producto
 function renderizarProductos() {
@@ -28,12 +30,15 @@ function renderizarProductos() {
         `;
     }
 
+    
 //Eventos:
     productos.forEach((producto) => {
         document.getElementById(`btn${producto.id}`).addEventListener("click", function () {
             agregarACarrito(producto);
+
         });
     });
+
 }
 
 if (contenedor) {
@@ -126,7 +131,9 @@ function clickeo() {
                 window.location.href = './formulario_compras.html';
             }
         });
+
     }
+
 }
 
 
