@@ -10,9 +10,6 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let contenedor = document.getElementById("articulos");
 
 
-
-
-
 // Recorremos el array de productos e inyectamos los datos de cada producto
 function renderizarProductos() {
     for (const producto of productos) {
