@@ -1,3 +1,6 @@
+
+
+
 //PRODUCTOS - Renderizarmos los productos:
 console.log(productos);
 
@@ -9,7 +12,11 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 // Traemos el ID articulos del index.html
 let contenedor = document.getElementById("articulos");
 
+const DateTime = luxor.DateTime;
+const inicio = DateTime.now(); //guarda los datos cuando se accede a la web
+console.log(inicio.string());
 
+//
 // Recorremos el array de productos e inyectamos los datos de cada producto
 function renderizarProductos() {
     for (const producto of productos) {
