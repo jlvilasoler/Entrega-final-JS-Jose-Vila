@@ -12,9 +12,9 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 // Traemos el ID articulos del index.html
 let contenedor = document.getElementById("articulos");
 
-const DateTime = luxor.DateTime;
+const DateTime = luxon.DateTime;
 const inicio = DateTime.now(); //guarda los datos cuando se accede a la web
-console.log(inicio.string());
+console.log(inicio);
 
 //
 // Recorremos el array de productos e inyectamos los datos de cada producto
