@@ -39,7 +39,6 @@ function renderizarProductos() {
     productos.forEach((producto) => {
         document.getElementById(`btn${producto.id}`).addEventListener("click", function () {
             agregarACarrito(producto);
-
         });
     });
 
@@ -135,9 +134,12 @@ function clickeo() {
                 window.location.href = './formulario_compras.html';
             }
         });
-
     }
-
+                           
+    const fin = DateTime.now()
+    const Interval = luxon.Interval   
+    const tiempoEligiendo = Interval.fromDateTimes(inicio,fin);
+    console.log(`El cliente demoró eligiendo sus productos: ${tiempoEligiendo.length("seconds")} segundos`);
 }
 
 
