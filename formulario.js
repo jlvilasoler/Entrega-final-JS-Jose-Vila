@@ -134,6 +134,8 @@ formulario.addEventListener("submit", (e) => {
         if (result) {
             window.location.href='./index.html';
         }
+            //storage NEW
+    localStorage.removeItem("carrito");
       });
 
 /*

@@ -1,8 +1,13 @@
 //PRODUCTOS - Renderizarmos los productos:
-console.log(productos);
+//console.log(productos);
 
 // Elimina todos los elementos
 localStorage.clear();
+
+
+
+
+
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -21,26 +26,29 @@ function renderizarProductos() {
                     <p class="card-text text-center fs-6">${producto.descripcion}</p>
                     <h4 class="card-text text-center">${producto.marca}</h4>
                     <h5 class="card-text text-center fs-2 bold">$ ${producto.precio}</h5>
-                    <button id='btn${producto.id}' class="btn btn-primary mx-auto">Comprar</button>
-                </div>
+                        <button id='btn${producto.id}' class="btn btn-primary mx-auto">Comprar</button>
+                    </div>
             </div>   
         `;
+
+
     }
+
 
     
 //Eventos:
     productos.forEach((producto) => {
         document.getElementById(`btn${producto.id}`).addEventListener("click", function () {
             agregarACarrito(producto);
-
-        });
+        }); 
     });
-
 }
 
-if (contenedor) {
-    renderizarProductos();
-}
+
+
+///
+
+
 
 
 
@@ -59,8 +67,13 @@ function agregarACarrito(prodAAgregar) {
         imageAlt: `\n\n${prodAAgregar.articulo} ${prodAAgregar.descripcion} ${prodAAgregar.marca}`,
         showConfirmButton: false,
         timer: 1000,
+        
     })
 
+
+
+
+    
 //Storage - set item
     localStorage.setItem("carrito", JSON.stringify(carrito))
 
@@ -77,7 +90,15 @@ function agregarACarrito(prodAAgregar) {
     <td>${prodAAgregar.descripcion}</td>
     <td>${prodAAgregar.precio}</td>
     </tr>
+
+    
     `;
+
+
+
+
+
+
 
 
 
@@ -93,7 +114,6 @@ function agregarACarrito(prodAAgregar) {
 //CANTIDAD A LOCALSTORAGE:
     localStorage.setItem("cantidad-formulario", JSON.stringify({ totalCarrito: totalCarrito, cant: cant }));
 }
-
 
 
 
@@ -136,7 +156,17 @@ function clickeo() {
 
 
 
-//
+
+//FUNCION JSON PROPIOç
+async function obtenerJSON(){
+    const URLJSON = 'productos.json';
+    const respuesta = await fetch(URLJSON);
+    const data = await respuesta.json();    
+    productos = data;
+
+    if (contenedor) {
+        renderizarProductos();
+}
+}
 
 
-//"window.location.href='./formulario_compras.html'"
