@@ -3,10 +3,13 @@ const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 
 
+
 //RESUMEN TOTAL COMPRA ARRIBA A LA DERECHA (Cambiamos resumen por JS)
+
 
 let cantart = document.getElementById("cantidad");
 cantart.innerHTML = "Cantidad articulos:";
+
 
 let total = document.getElementById("total");
 total.innerHTML = "Total a pagar:";
@@ -30,6 +33,9 @@ document.getElementById("cantidad").innerText = "Cantidad de Articulos: " + cant
 //SUMA TOTAL DE COMPRA - visualizamos la cantidad total de articulos en el carrito:
 let totalCarrito = carrito.reduce((acumulador, producto) => acumulador + producto.precio, 0);
 document.getElementById("total").innerText = "Total a pagar : " + "$ " + totalCarrito;
+
+
+
 
 
 //FORMULARIO DE COMPRA:
@@ -128,13 +134,9 @@ formulario.addEventListener("submit", (e) => {
         if (result) {
             window.location.href='./index.html';
         }
-            //storage NEW
-    localStorage.removeItem("carrito");
       });
 
 /*
-
-
     alert("Estamos preparando su compra"+"\n\nEn breve entraremos en comunicación con usted"+"\n\nCualquier consulta puede comunicarse con nostros a través del 0900-0101 o a través del email contacto@tiendaonline.uy" + "\n\nMuchas gracias...")
     window.location.href='./index.html'*/
     console.log("Documento:", documentInput.value)

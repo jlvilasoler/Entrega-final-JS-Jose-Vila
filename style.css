@@ -347,6 +347,89 @@ h2 {
   color: rgb(0, 0, 0);
 }
 
-.btn-suprimir {
-background-color: #ffffff;
+
+
+/** CONTACTO **/
+.contacto_primer_titulo {
+  background-color: #201f24;
+  font-size: 20px;
+  padding: 1px;
+  margin: 0px;
+  color: #ffffff;
+}
+
+.form_content {
+  background: #201f24;
+  font-size: 25px;
+  color: #d3d3d3;
+  height: 1450px;
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  gap: 10px;
+  resize: none;
+  padding-top: 80px;
+}
+
+.btn .imagen_contact {
+  background-color: #201f24;
+  color: #143d11;
+  z-index: 1;
+}
+
+.form_content_contacto {
+  display: flex;
+  font-size: 22px;
+  text-align: left;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+  padding-bottom: 20px;
+}
+
+/** BARRAS DEPARTAMENTO - CIUDAD/LOCALIDAD: **/
+.form_content select {
+  height: 44px;
+  display: flex;
+  font-size: 25px;
+  width: 390px;
+  padding: 7px;
+  gap: 10px;
+}
+.form_content select input {
+  padding: 5px;
+  font-family: "Karla", sans-serif;
+  font-size: 22px;
+  width: 390px;
+  border-radius: 5px;
+  padding-bottom: 5px;
+  margin: 6px;
+  resize: none;
+}
+.form_content select textarea {
+  resize: none;
+  font-size: 32px;
+  width: 390px;
+}
+.form_content select fieldset {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding-top: 20px;
+  height: 1500px;
+  justify-content: center;
+}
+.form_content select .tipo {
+  padding: 5px;
+  margin: 5px;
+  font-size: 20px;
+}
+
+.categoria_titulo_contacto {
+  background-color: #201f24;
+  color: #ffffff;
+  font-size: 26px;
+  padding-top: 80px;
+  margin: 0;
+  text-align: center;
 }
