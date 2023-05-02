@@ -133,8 +133,8 @@ function clickeo() {
 
 }
 
-/*
 
+/*
 //JSON
 async function obtenerJSON(){
 const URLJSON = "/productos.json";
@@ -144,8 +144,10 @@ productos = data;
 renderizarProductos();
 }
 
-
 */
+
+
+
 
 
 
