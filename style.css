@@ -14,70 +14,6 @@ a {
 }
 
 
-
-
-
-.mostrador .fila img {
-  width: 100%;
-  margin: 30px 0;
-}
-
-/* BANNER 2 DOWNSIDE */
-.imagen_2 {
-  background-color: rgba(191, 191, 191, 0.843);
-  width: 100%;
-  height: 400px;
-  display: block;
-  padding: 1px;
-  margin: 0 auto;
-}
-
-/* FOOTER */
-.footer {
-  background-color: #201f24;
-  color: rgba(191, 191, 191, 0.843);
-  padding-top: 80px;
-  padding: 20px;
-  margin: 20px;
-  text-align: left;
-}
-
-.botones_footer {
-  color: rgba(191, 191, 191, 0.843);
-}
-.botones_footer:hover {
-  color: #ffffff;
-  transition: 0.4s;
-}
-
-/* LEGAL */
-.legal h5 {
-  float: right;
-  color: #ffffff;
-  font-size: 13px;
-  text-align: right;
-  padding: 5px;
-  margin: 20px;
-}
-
-.fa-instagram {
-  color: rgb(129, 46, 129);
-  padding-top: 1px;
-  font-size: 20px;
-}
-
-.fa-twitter {
-  color: rgb(17, 79, 166);
-  padding-top: 1px;
-  font-size: 20px;
-}
-
-.fa-facebook {
-  color: rgb(9, 9, 175);
-  padding-top: 1px;
-  font-size: 20px;
-}
-
 /* LOGO UPSIDE */
 .logo p a {
   color: #ffffff;
@@ -101,27 +37,9 @@ a {
 }
 
 /* ESTILOS GENERALES */
-body {
-  background-color: #04a90c;
-}
 
-.contenido-principal {
-  background-color: #20241f;
-  margin: 2px;
-}
 
-.banner_segundo {
-  background-color: #201f24;
-}
 
-nav {
-  max-width: 900px;
-  margin: auto;
-  background-color: #201f24;
-  font-size: 20px;
-  margin: 0px;
-  padding-bottom: 0px;
-}
 
 /* CARRUSEL BOOTSTRAP */
 .carousel-inner {
@@ -195,12 +113,7 @@ ul {
 
 
 /* CONTENIDO PRINCIPAL (CARDS PRODUCTOS) */
-/* MAPA INDEX */
-.mapa_imagen {
-  padding-top: 30px;
-  width: 520px;
-  height: 300px;
-}
+
 
 
 /* BOTONES AGREGAR A CARRITO */
@@ -231,8 +144,9 @@ section {
   padding-left: 70px;
   padding-right: 70px;
   text-align: right;
-
 }
+
+
 
 section h3 {
   background-color: #201f24;
@@ -249,6 +163,8 @@ article div{
   background-color: rgb(244, 245, 244);
   padding: 20px;
 }
+
+
 
 
 h2 {
@@ -278,7 +194,6 @@ h2 {
   align-content: center;
   align-items: center;
   text-align: center;
-
 }
 
 
@@ -550,32 +465,10 @@ nav {
 
 
 /* CONTENIDO PRINCIPAL (CARDS PRODUCTOS) */
-/* MAPA INDEX */
-.mapa_imagen {
-  padding-top: 30px;
-  width: 520px;
-  height: 300px;
-}
 
-/** CARD FINAL PROMO **/
-.btn-promo {
-  border-radius: 7px;
-  margin-top: 20px;
-  color: #ffffff;
-  background-color: #140f7c;
-  padding: 10px 25px 10px 25px;
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  font-size: 23px;
-  cursor: pointer;
-  text-align: center;
-  align-content: center;
-}
-.btn-promo:hover {
-  background-color: #0a2e0c;
-  transition: 0.3s;
-}
+
+
+
 
 /** CONTACTO **/
 .contacto_primer_titulo {
@@ -662,323 +555,13 @@ nav {
   text-align: center;
 }
 
-/* BARRA OFERTAS ESPECIALES */
-.ofertas {
-  color: rgb(240, 240, 240);
-  background-color: red;
-  text-align: center;
-  margin-top: 90px;
-}
 
-.oferta_titulo h1 {
-  font-size: 25px;
-  margin: 0;
-}
-
-/* BOTONES CATEGORIAS */
-.cat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px;
-  padding: 20px;
-}
-
-.btn_categoria {
-  width: 390px;
-  height: 80px;
-  background-color: aliceblue;
-  font-size: 40px;
-  display: flex;
-  color: #c93c19;
-  justify-content: center;
-  border-color: white;
-  border-radius: 5px;
-  align-items: center;
-  margin: 5px;
-  text-align: center;
-  font-weight: bold;
-  padding: 50px;
-  cursor: pointer;
-}
-.btn_categoria:hover {
-  background-color: #c93c19;
-  color: #ffffff;
-  transition: 0.1s;
-}
-
-
-.categoria_titulo_registro {
-  background-color: #201f24;
-  color: #ffffff;
-  font-size: 26px;
-  padding-top: 80px;
-  margin: 0;
-  text-align: center;
-}
-
-.form_registro {
-  background: #201f24;
-  font-size: 25px;
-  color: #d3d3d3;
-  height: 1100px;
-  display: flex;
-  flex-direction: center;
-  justify-content: center;
-  gap: 10px;
-  resize: none;
-  padding-top: 0px;
-}
-.form_registro fieldset {
-  display: flex;
-  flex-direction: column;
-  margin-top: 5px;
-  padding-top: 5px;
-  height: 1100px;
-  justify-content: center;
-}
-
-.form_content_registro {
-  display: flex;
-  font-size: 22px;
-  text-align: left;
-  flex-direction: column;
-  width: 100%;
-  gap: 1px;
-  padding-top: 5px;
-  padding-bottom: 10px;
-}
-
-/** BARRAS DEPARTAMENTO - CIUDAD/LOCALIDAD: **/
-.form_content_registro select {
-  height: 45px;
-  display: flex;
-  font-size: 25px;
-  width: 390px;
-  padding: 7px;
-  gap: 10px;
-}
-.form_content_registro select input {
-  padding: 5px;
-  font-family: "Karla", sans-serif;
-  font-size: 22px;
-  width: 390px;
-  border-radius: 5px;
-  padding-bottom: 5px;
-  margin: 6px;
-  resize: none;
-}
-.form_content_registro select textarea {
-  resize: none;
-  font-size: 28px;
-  width: 390px;
-}
-.form_content_registro select .tipo {
-  padding: 5px;
-  margin: 5px;
-  font-size: 25px;
-}
-
-/* BARRA OFERTAS ESPECIALES */
-.ofertas {
-  color: rgb(240, 240, 240);
-  background-color: red;
-  text-align: center;
-  margin-top: 90px;
-}
-
-.oferta_titulo h1 {
-  font-size: 25px;
-  margin: 0;
-}
-
-/* BOTONES CATEGORIAS */
-.cat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px;
-  padding: 20px;
-}
-
-.btn_categoria {
-  width: 390px;
-  height: 80px;
-  background-color: aliceblue;
-  font-size: 40px;
-  display: flex;
-  color: #c93c19;
-  justify-content: center;
-  border-color: white;
-  border-radius: 5px;
-  align-items: center;
-  margin: 5px;
-  text-align: center;
-  font-weight: bold;
-  padding: 50px;
-  cursor: pointer;
-}
-.btn_categoria:hover {
-  background-color: #c93c19;
-  color: #ffffff;
-  transition: 0.1s;
-}
 
 /* CONTENIDO PRINCIPAL (CARDS PRODUCTOS) */
-.contenido {
-  max-width: 400px;
-  width: 100%;
-  margin: 40px auto;
-  display: flex;
-}
 
-.cards {
-  background-color: rgba(255, 255, 255, 0.969);
-  display: flex;
-  padding: 0px 10px 20px 100px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  align-items: center;
-}
 
-.mostrador {
-  width: 70%;
-  transition: 0.3s ease;
-}
-.mostrador .fila {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 40px;
-}
-.mostrador .fila .item {
-  max-width: 200px;
-  padding: 0px;
-  height: 400px;
-  text-align: center;
-  margin: 5 30px;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: 1s;
-}
-.mostrador .fila .item {
-  width: 100%;
-}
-.mostrador .fila .item:hover {
-  background-color: rgb(255, 255, 255);
-}
-.mostrador .fila .articulo {
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  font-size: 16px;
-}
-.mostrador .fila .descripcion {
-  color: rgba(0, 0, 0, 0.4352941176);
-  font-weight: bold;
-  font-size: 16px;
-}
-.mostrador .fila .precio {
-  color: #143d11;
-  font-weight: bold;
-  font-size: 32px;
-}
 
-.seleccion {
-  transition: 5s ease;
-  width: 40%;
-  border: 1px solid #ffffff;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-}
 
-/* BOTONES AGREGAR A CARRITO */
-.btn-promo {
-  border-radius: 7px;
-  margin-top: 20px;
-  color: #ffffff;
-  background-color: #140f7c;
-  padding: 10px 25px 10px 25px;
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  font-size: 23px;
-  cursor: pointer;
-  text-align: center;
-  align-content: center;
-}
-.btn-promo:hover {
-  background-color: #0a2e0c;
-  transition: 0.3s;
-}
-
-.categoria {
-  background-color: #201f24;
-  color: white;
-  font-size: 26px;
-  text-align: center;
-}
-
-/* BOTONES AGREGAR A CARRITO */
-.btn {
-  border-radius: 7px;
-  margin-top: 10px;
-  color: #ffffff;
-  background-color: #c11414;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  font-size: 23px;
-  cursor: pointer;
-  align-items: center;
-  text-align: center;
-}
-
-.btn:hover {
-  background-color: #1a731f;
-  color: #ffffff;
-  transition: 0.3s;
-}
-
-.categoria_titulo_principal {
-  background-color: #201f24;
-  color: #ffffff;
-  font-size: 26px;
-  text-align: center;
-  padding-top: 80px;
-  margin: 0;
-}
-
-.categoria_titulo_principal {
-  background-color: #201f24;
-  color: #ffffff;
-  font-size: 26px;
-  text-align: center;
-  padding-top: 80px;
-  margin: 0;
-}
-
-.categoria_titulo_principal {
-  background-color: #201f24;
-  color: #ffffff;
-  font-size: 26px;
-  text-align: center;
-  padding-top: 80px;
-  margin: 0;
-}
-
-.categoria_titulo_principal {
-  background-color: #201f24;
-  color: #ffffff;
-  font-size: 26px;
-  text-align: center;
-  padding-top: 80px;
-  margin: 0;
-}
 
 
 
