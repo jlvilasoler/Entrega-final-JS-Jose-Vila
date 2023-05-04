@@ -1,5 +1,4 @@
-{
-	"productos": [{
+[{
 			"id": 60001,
 			"foto": "./img/Aguacongasnativa600ml.png",
 			"articulo": "Agua con gas",
@@ -101,11 +100,9 @@
 		{
 			"id": 60012,
 			"foto": "./img/salusfrutte-limonada.png",
-			"articul": "Agua Saborizada",
-			"descripcio": "Frutte Limonada 1L",
+			"articulo": "Agua Saborizada",
+			"descripcion": "Frutte Limonada 1L",
 			"marca": "SALUS",
 			"precio": 110.00,
 			"cantidadCompra": 1
-		}
-	]
-}
+		}]

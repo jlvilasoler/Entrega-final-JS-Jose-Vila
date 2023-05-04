@@ -1,5 +1,5 @@
 //PRODUCTOS - Renderizarmos los productos:
-console.log(productos);
+//console.log(productos);
 
 // Elimina todos los elementos
 localStorage.clear();
@@ -10,10 +10,17 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let contenedor = document.getElementById("articulos");
 
 
+
+
+fetch("/productos.json")
+.then(response => response.json())
+.then(data => renderizarProductos(data))
+
 // Recorremos el array de productos e inyectamos los datos de cada producto
-function renderizarProductos() {
+function renderizarProductos(productos) {
     for (const producto of productos) {
-        contenedor.innerHTML += `
+        const div = document.createElement("div")
+        div.innerHTML += `
             <div class="card col-md-4 col-lg-2 col-sm-6">
                 <img src=${producto.foto} class="card-img-top" xs alt="...">
                 <div class="card-body mx-auto">
@@ -25,21 +32,16 @@ function renderizarProductos() {
                 </div>
             </div>   
         `;
+        contenedor.appendChild(div)
+        let btnAgregar = document.getElementById(`btn${producto.id}`)
+        console.log(btnAgregar)
+        btnAgregar.addEventListener("click", () => agregarACarrito(producto));
     }
 
-    
-//Eventos:
-    productos.forEach((producto) => {
-        document.getElementById(`btn${producto.id}`).addEventListener("click", function () {
-            agregarACarrito(producto);
-
-        });
-    });
-
 }
+    
 
 
-    renderizarProductos();
 
 
 
@@ -104,7 +106,6 @@ function agregarACarrito(prodAAgregar) {
 //Boton Enviar
 
 var botonenviar = document.getElementById("btn-enviar");
-
 botonenviar.addEventListener("click", clickeo);
 
 function clickeo() {
@@ -133,8 +134,8 @@ function clickeo() {
 
 }
 
-
 /*
+
 //JSON
 async function obtenerJSON(){
 const URLJSON = "/productos.json";
@@ -144,10 +145,8 @@ productos = data;
 renderizarProductos();
 }
 
+
 */
-
-
-
 
 
 
