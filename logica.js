@@ -21,7 +21,7 @@ function renderizarProductos(productos) {
     for (const producto of productos) {
         const div = document.createElement("div")
         div.innerHTML += `
-            <div class="card col-md-4 col-lg-2 col-sm-6">
+            <div class="card">
                 <img src=${producto.foto} class="card-img-top" xs alt="...">
                 <div class="card-body mx-auto">
                     <p class="card-text text-center fs-4">${producto.articulo}</p>
@@ -134,22 +134,14 @@ function clickeo() {
 
 }
 
-/*
+//API clima
+function obtenerDolar() {
+    const URLDOLAR= "https://api.weatherbit.io/v2.0/history/subhourly?lat=35.775&lon=-78.638&start_date=2023-05-01&end_date=2023-05-02&tz=local&key=API_KEY";
+    fetch(URLDOLAR)
+    .then((respuesta) => respuesta.json())
+    .then((datos) => {
+        const dolarBlue = datos.blue;
+        console.log(dolarBlue);
+    })}
 
-//JSON
-async function obtenerJSON(){
-const URLJSON = "/productos.json";
-const respuesta = await fetch(URLJSON);
-const data = await respuesta.json();
-productos = data;
-renderizarProductos();
-}
-
-
-*/
-
-
-
-
-
-//"window.location.href='./formulario_compras.html'"
+    obtenerDolar();

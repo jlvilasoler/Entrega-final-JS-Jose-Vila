@@ -1,4 +1,4 @@
-/* * Selector universal de reseteo de estilos por default del html */
+
 * {
   margin: 0;
   padding: 0;
@@ -137,7 +137,7 @@ ul {
   transition: 0.3s;
 }
 
-/* NO ES */
+
 section {
   background-color: #201f24;
   color:rgb(245, 244, 244);
@@ -148,7 +148,6 @@ section {
 }
 
 
-/** SUB-TITULOS **/
 section h3 {
   background-color: #201f24;
   color:rgb(245, 244, 244);
@@ -157,16 +156,20 @@ section h3 {
   border-radius: 10px;
   padding: 20px;
   text-align: center;
-
 }
 
-/* NO ES */
+
 article div{
   background-color: rgb(245, 245, 244);
   padding: 20px;
 }
 
-
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 59px;
+}
 
 
 h2 {
@@ -268,12 +271,6 @@ h2 {
   transition: 0.3s;
   color: rgb(0, 0, 0);
 }
-
-
-
-/** CONTACTO **/
-
-
 
 
 /** BARRAS DEPARTAMENTO - CIUDAD/LOCALIDAD: **/
@@ -531,15 +528,6 @@ nav {
   margin: 0;
   text-align: center;
 }
-
-
-
-/* CONTENIDO PRINCIPAL (CARDS PRODUCTOS) */
-
-
-
-
-
 
 
 @media only screen and (max-width: 1200px) {
