@@ -113,9 +113,6 @@ ul {
 
 
 /* CONTENIDO PRINCIPAL (CARDS PRODUCTOS) */
-.card {
-  display: flex;
-}
 
 
 /* BOTONES AGREGAR A CARRITO */
@@ -212,7 +209,7 @@ h2 {
 .boton-enviar:hover {
   background-color: #6ace38;
   transition: 0.3s;
-    color: rgb(0, 0, 0);  
+  color: rgb(0, 0, 0);  
 }
 
 
