@@ -145,3 +145,11 @@ function obtenerDolar() {
 
     obtenerDolar();
     */
+
+const apiKey = 'tu_clave_de_api';
+const city = 'nombre_de_la_ciudad';
+
+fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
