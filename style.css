@@ -113,7 +113,9 @@ ul {
 
 
 /* CONTENIDO PRINCIPAL (CARDS PRODUCTOS) */
-
+.card {
+  display: flex;
+}
 
 
 /* BOTONES AGREGAR A CARRITO */
@@ -363,6 +365,7 @@ h2 {
   padding-top: 30px;
   padding: 5px;
   margin: 20px;
+  text-align: left;
 }
 
 .botones_footer {
