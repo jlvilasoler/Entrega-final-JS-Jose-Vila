@@ -115,6 +115,7 @@ ul {
 /* CONTENIDO PRINCIPAL (CARDS PRODUCTOS) */
 
 
+
 /* BOTONES AGREGAR A CARRITO */
 .btn {
   border-radius: 7px;
@@ -136,6 +137,7 @@ ul {
   transition: 0.3s;
 }
 
+/* NO ES */
 section {
   background-color: #201f24;
   color:rgb(245, 244, 244);
@@ -146,7 +148,7 @@ section {
 }
 
 
-
+/** SUB-TITULOS **/
 section h3 {
   background-color: #201f24;
   color:rgb(245, 244, 244);
@@ -158,8 +160,9 @@ section h3 {
 
 }
 
+/* NO ES */
 article div{
-  background-color: rgb(244, 245, 244);
+  background-color: rgb(245, 245, 244);
   padding: 20px;
 }
 
@@ -209,7 +212,7 @@ h2 {
 .boton-enviar:hover {
   background-color: #6ace38;
   transition: 0.3s;
-  color: rgb(0, 0, 0);  
+    color: rgb(0, 0, 0);  
 }
 
 
@@ -269,42 +272,9 @@ h2 {
 
 
 /** CONTACTO **/
-.contacto_primer_titulo {
-  background-color: #201f24;
-  font-size: 20px;
-  padding: 1px;
-  margin: 0px;
-  color: #ffffff;
-}
 
-.form_content {
-  background: #201f24;
-  font-size: 25px;
-  color: #d3d3d3;
-  height: 1450px;
-  display: flex;
-  flex-direction: center;
-  justify-content: center;
-  gap: 10px;
-  resize: none;
-  padding-top: 80px;
-}
 
-.btn .imagen_contact {
-  background-color: #201f24;
-  color: #143d11;
-  z-index: 1;
-}
 
-.form_content_contacto {
-  display: flex;
-  font-size: 22px;
-  text-align: left;
-  flex-direction: column;
-  width: 100%;
-  gap: 5px;
-  padding-bottom: 20px;
-}
 
 /** BARRAS DEPARTAMENTO - CIUDAD/LOCALIDAD: **/
 .form_content select {
@@ -424,12 +394,14 @@ h2 {
 }
 
 /* ESTILOS GENERALES */
+
+/*FONDO DE TODO*/
 body {
   background-color: #201f24;
 }
 
 .contenido-principal {
-  background-color: #201f24;
+  background-color: #23241f;
   margin: 2px;
 }
 
@@ -465,6 +437,11 @@ nav {
 
 
 /* CONTENIDO PRINCIPAL (CARDS PRODUCTOS) */
+
+
+
+
+
 
 
 
