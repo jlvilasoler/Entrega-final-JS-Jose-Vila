@@ -105,5 +105,14 @@
 			"marca": "SALUS",
 			"precio": 110.00,
 			"cantidadCompra": 1
+		},
+		{
+			"id": 60013,
+			"foto": "./img/sierra-de-minas-alfajor.png",
+			"articulo": "Alfajor",
+			"descripcion": "60 g",
+			"marca": "SIERRAS DE MINAS",
+			"precio": 45.00,
+			"cantidadCompra": 1
 		}
 	]

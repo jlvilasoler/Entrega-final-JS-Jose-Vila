@@ -37,7 +37,6 @@ function renderizarProductos(productos) {
         console.log(btnAgregar)
         btnAgregar.addEventListener("click", () => agregarACarrito(producto));
     }
-
 }
     
 
@@ -133,7 +132,7 @@ function clickeo() {
     }
 
 }
-
+/*
 //API clima
 function obtenerDolar() {
     const URLDOLAR= "https://api.weatherbit.io/v2.0/history/subhourly?lat=35.775&lon=-78.638&start_date=2023-05-01&end_date=2023-05-02&tz=local&key=API_KEY";
@@ -145,3 +144,4 @@ function obtenerDolar() {
     })}
 
     obtenerDolar();
+    */
