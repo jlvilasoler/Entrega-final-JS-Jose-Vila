@@ -12,7 +12,7 @@ let contenedor = document.getElementById("articulos");
 
 
 
-fetch("/productos.json")
+fetch("./productos.json")
 .then(response => response.json())
 .then(data => renderizarProductos(data))
 
