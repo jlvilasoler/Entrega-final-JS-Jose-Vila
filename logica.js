@@ -200,6 +200,10 @@ if(navigator.geolocation){
             console.log("poco nuboso");
             break;
 
+            case "drizzle":     
+            icono.src = 'icons/rainy-7.svg'
+            console.log("LLUVIZNA");
+            break;
         }
 
     })  
