@@ -38,9 +38,6 @@ function renderizarProductos(productos) {
         btnAgregar.addEventListener("click", () => agregarACarrito(producto));
     }
 }
-    
-
-
 
 
 
@@ -132,24 +129,98 @@ function clickeo() {
     }
 
 }
-/*
-//API clima
-function obtenerDolar() {
-    const URLDOLAR= "https://api.weatherbit.io/v2.0/history/subhourly?lat=35.775&lon=-78.638&start_date=2023-05-01&end_date=2023-05-02&tz=local&key=API_KEY";
-    fetch(URLDOLAR)
-    .then((respuesta) => respuesta.json())
-    .then((datos) => {
-        const dolarBlue = datos.blue;
-        console.log(dolarBlue);
-    })}
 
-    obtenerDolar();
-    */
 
-const apiKey = 'tu_clave_de_api';
-const city = 'nombre_de_la_ciudad';
 
-fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error(error));
+//API CLIMA Y UBICACION
+window.addEventListener("load", ()=> {
+if(navigator.geolocation){
+
+    let temperaturaValor = document.getElementById("temperatura-Valor")
+    let ubicacion = document.getElementById("ubicacion")
+    let icono = document.getElementById("icono")
+
+   navigator.geolocation.getCurrentPosition(position => {
+    lon = position.coords.longitude
+    lat = position.coords.latitude
+
+
+
+     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=2c027a02a8f28f67380f6206d601ab90`
+    /*const url = `https://api.openweathermap.org/data/2.5/weather?q=Montevideo&appid=2c027a02a8f28f67380f6206d601ab90`; */
+    console.log(url)
+
+    fetch(url)
+    .then(response => {return response.json()   })
+    .then(data => {
+
+        let temp = Math.round(data.main.temp)
+        temperaturaValor.textContent = `${temp} °f`
+        let celsius = (temp - 32) / 1.8;
+        temperaturaValor.textContent = `${celsius.toFixed(2)} °C `;
+
+        console.log(data.weather[0].description)
+
+
+        
+        ubicacion.textContent = data.name
+
+
+        switch(data.weather[0].description) {
+            case "overcast clouds":     
+            icono.src = 'icons/cloudy.svg'
+            break;
+
+            case "rainy":     
+            icono.src = 'icons/rainy-1.svg'
+            console.log("LLUVIOSO");
+            break;
+            
+            case "snowy":     
+            icono.src = 'icons/snowy-1.svg'
+            console.log("NIEVE");
+            break;
+
+            case "thunder":     
+            icono.src = 'icons/thunder.svg'
+            console.log("VENTOSO");
+            break;
+
+            case "clear sky":     
+            icono.src = 'icons/day.svg'
+            console.log("despejado");
+            break;
+
+            case "light rain":     
+            icono.src = 'icons/rainy-4.svg'
+            console.log("llovizna nublado");
+            break;
+
+            case "light rain with sun":     
+            icono.src = 'icons/rainy-3.svg'
+            console.log("llovizna sol");
+            break;
+
+            case "few clouds":     
+            icono.src = 'icons/cloudy-day-1.svg'
+            console.log("poco nuboso");
+            break;
+
+        }
+
+
+
+
+
+
+
+
+
+
+    })  
+    .catch(error => {
+        console.log(error)
+    })
+})
+    }
+})

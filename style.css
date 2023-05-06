@@ -327,9 +327,9 @@ h2 {
 .footer {
   background-color: #201f24;
   color: rgba(191, 191, 191, 0.843);
-  padding-top: 30px;
-  padding: 5px;
-  margin: 20px;
+  padding-top: 90px;
+
+
   text-align: left;
 }
 
@@ -343,31 +343,14 @@ h2 {
 
 /* LEGAL */
 .legal h5 {
-  float: right;
+  float: left;
   color: #ffffff;
-  font-size: 13px;
-  text-align: right;
-  padding: 5px;
-  margin: 20px;
+  font-size: 10px;
+  text-align: left;
+  padding-top: 90px;
+
 }
 
-.fa-instagram {
-  color: rgb(129, 46, 129);
-  padding-top: 1px;
-  font-size: 20px;
-}
-
-.fa-twitter {
-  color: rgb(17, 79, 166);
-  padding-top: 1px;
-  font-size: 20px;
-}
-
-.fa-facebook {
-  color: rgb(9, 9, 175);
-  padding-top: 1px;
-  font-size: 20px;
-}
 
 /* LOGO UPSIDE */
 .logo p a {
@@ -531,6 +514,30 @@ nav {
 }
 
 
+.clima{
+  font-size: 12px;
+  align-items: center;
+}
+
+.ubicacion{
+  font-size: 12px;
+  align-items: center;
+}
+
+.icono{
+  align-items: center;
+}
+
+.informacion {
+  color: white;
+  display:flex;
+  padding-right: 30px;
+  justify-content: right;
+  align-items: center;
+}
+
+
+
 @media only screen and (max-width: 1200px) {
   .menu-horizontal {
     width: 50%;
@@ -572,3 +579,5 @@ nav {
     font-size: 16px;
   }
 }
+
+
