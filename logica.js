@@ -153,11 +153,11 @@ if(navigator.geolocation){
 
         let temp = Math.round(data.main.temp)
         temperaturaValor.textContent = `${temp} °f`
-        let celsius = (temp - 32) / 1.8;
-        temperaturaValor.textContent = `${celsius.toFixed(2)} °C `;
+        let celsius = (temp - 273.15);
+        temperaturaValor.textContent = `${celsius.toFixed(0)} °C `;
         console.log(data.weather[0].description)
 
-        ubicacion.textContent = data.name
+        ubicacion.textContent = data.name + ", " + data.sys.country;
 
 
         switch(data.weather[0].description) {
@@ -172,12 +172,12 @@ if(navigator.geolocation){
             
             case "snowy":     
             icono.src = 'icons/snowy-1.svg'
-            console.log("NIEVE");
+            console.log("Nieve");
             break;
 
             case "thunder":     
             icono.src = 'icons/thunder.svg'
-            console.log("VENTOSO");
+            console.log("Ventoso");
             break;
 
             case "clear sky":     
@@ -202,8 +202,15 @@ if(navigator.geolocation){
 
             case "drizzle":     
             icono.src = 'icons/rainy-7.svg'
-            console.log("LLUVIZNA");
+            console.log("Llovizna");
             break;
+
+            case "light intensity drizzle":     
+            icono.src = 'icons/rainy-5.svg'
+            console.log("Llovizna ligera");
+            break;
+
+            
         }
 
     })  

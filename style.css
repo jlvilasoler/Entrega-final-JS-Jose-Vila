@@ -515,27 +515,35 @@ nav {
 
 
 .clima{
-  font-size: 12px;
-  align-items: center;
+  font-size: 11px;
+  width: 5.5%;
+  color: rgb(210, 209, 209);
+  align-self:flex-end;
+  align-content: end;
 }
 
-.ubicacion{
-  font-size: 12px;
-  align-items: center;
-}
 
-.icono{
-  align-items: center;
-}
 
 .informacion {
-  color: white;
+  background-color: #0f0f0f;
+  color: rgb(210, 209, 209);
   display:flex;
-  padding-right: 30px;
-  justify-content: right;
-  align-items: center;
+  padding-right: 10px;
+  justify-content: flex-end;
+  margin: 0 auto;
 }
 
+.temp {
+  font-size: 11px;
+  width: 2.2%;
+  color: rgb(210, 209, 209);
+  align-self:last baseline;
+
+}
+
+.icono {
+  width: 2%;
+}
 
 
 @media only screen and (max-width: 1200px) {
