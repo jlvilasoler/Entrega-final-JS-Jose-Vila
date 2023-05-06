@@ -147,9 +147,6 @@ if(navigator.geolocation){
 
 
      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=2c027a02a8f28f67380f6206d601ab90`
-    /*const url = `https://api.openweathermap.org/data/2.5/weather?q=Montevideo&appid=2c027a02a8f28f67380f6206d601ab90`; */
-    console.log(url)
-
     fetch(url)
     .then(response => {return response.json()   })
     .then(data => {
@@ -158,11 +155,8 @@ if(navigator.geolocation){
         temperaturaValor.textContent = `${temp} °f`
         let celsius = (temp - 32) / 1.8;
         temperaturaValor.textContent = `${celsius.toFixed(2)} °C `;
-
         console.log(data.weather[0].description)
 
-
-        
         ubicacion.textContent = data.name
 
 
@@ -207,15 +201,6 @@ if(navigator.geolocation){
             break;
 
         }
-
-
-
-
-
-
-
-
-
 
     })  
     .catch(error => {
