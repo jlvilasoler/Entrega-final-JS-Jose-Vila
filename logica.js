@@ -13,8 +13,8 @@ let contenedor = document.getElementById("articulos");
 
 
 fetch("./productos.json")
-.then(response => response.json())
-.then(data => renderizarProductos(data))
+    .then(response => response.json())
+    .then(data => renderizarProductos(data))
 
 // Recorremos el array de productos e inyectamos los datos de cada producto
 function renderizarProductos(productos) {
@@ -46,7 +46,7 @@ function renderizarProductos(productos) {
 function agregarACarrito(prodAAgregar) {
     carrito.push(prodAAgregar);
     console.table(carrito);
-//Cartel aviso producto agrregado:
+    //Cartel aviso producto agrregado:
     Swal.fire({
         icon: 'success',
         title: 'Agregaste 1un:',
@@ -59,13 +59,13 @@ function agregarACarrito(prodAAgregar) {
         timer: 1000,
     })
 
-//Storage - set item
+    //Storage - set item
     localStorage.setItem("carrito", JSON.stringify(carrito))
 
 
 
 
-//Se agrega detalle de compra en filas en la tabla (carrito):
+    //Se agrega detalle de compra en filas en la tabla (carrito):
     document.getElementById("tablabody").innerHTML += `
     <tr>
     <td>${prodAAgregar.id}</td>
@@ -79,16 +79,16 @@ function agregarACarrito(prodAAgregar) {
 
 
 
-//SUMA TOTAL DE COMPRA - visualizamos el valor total que se llega gastado en el carrito:
+    //SUMA TOTAL DE COMPRA - visualizamos el valor total que se llega gastado en el carrito:
     let totalCarrito = carrito.reduce((acumulador, producto) => acumulador + producto.precio, 0);
     document.getElementById("total").innerText = "Total a pagar : " + "$ " + totalCarrito;
 
-//CANTIDAD - visualizamos la cantidad total de articulos en el carrito:
+    //CANTIDAD - visualizamos la cantidad total de articulos en el carrito:
     let cant = carrito.reduce((acumulador, producto) => acumulador + producto.cantidadCompra, 0);
     document.getElementById("cantidad").innerText = "Cantidad de Articulos: " + cant;
 
 
-//CANTIDAD A LOCALSTORAGE:
+    //CANTIDAD A LOCALSTORAGE:
     localStorage.setItem("cantidad-formulario", JSON.stringify({ totalCarrito: totalCarrito, cant: cant }));
 }
 
@@ -133,90 +133,93 @@ function clickeo() {
 
 
 //API CLIMA Y UBICACION
-window.addEventListener("load", ()=> {
-if(navigator.geolocation){
+window.addEventListener("load", () => {
+    if (navigator.geolocation) {
 
-    let temperaturaValor = document.getElementById("temperatura-Valor")
-    let ubicacion = document.getElementById("ubicacion")
-    let icono = document.getElementById("icono")
+        let temperaturaValor = document.getElementById("temperatura-Valor")
+        let ubicacion = document.getElementById("ubicacion")
+        let icono = document.getElementById("icono")
 
-   navigator.geolocation.getCurrentPosition(position => {
-    lon = position.coords.longitude
-    lat = position.coords.latitude
-
-
-
-     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=2c027a02a8f28f67380f6206d601ab90`
-    fetch(url)
-    .then(response => {return response.json()   })
-    .then(data => {
-
-        let temp = Math.round(data.main.temp)
-        temperaturaValor.textContent = `${temp} °f`
-        let celsius = (temp - 273.15);
-        temperaturaValor.textContent = `${celsius.toFixed(0)} °C `;
-        console.log(data.weather[0].description)
-
-        ubicacion.textContent = data.name + ", " + data.sys.country;
+        navigator.geolocation.getCurrentPosition(position => {
+            lon = position.coords.longitude
+            lat = position.coords.latitude
 
 
-        switch(data.weather[0].description) {
-            case "overcast clouds":     
-            icono.src = 'icons/cloudy.svg'
-            break;
 
-            case "rainy":     
-            icono.src = 'icons/rainy-1.svg'
-            console.log("LLUVIOSO");
-            break;
-            
-            case "snowy":     
-            icono.src = 'icons/snowy-1.svg'
-            console.log("Nieve");
-            break;
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=2c027a02a8f28f67380f6206d601ab90`
+            fetch(url)
+                .then(response => { return response.json() })
+                .then(data => {
 
-            case "thunder":     
-            icono.src = 'icons/thunder.svg'
-            console.log("Ventoso");
-            break;
+                    let temp = Math.round(data.main.temp)
+                    temperaturaValor.textContent = `${temp} °f`
+                    let celsius = (temp - 273.15);
+                    temperaturaValor.textContent = `${celsius.toFixed(0)} °C `;
+                    console.log(data.weather[0].description)
 
-            case "clear sky":     
-            icono.src = 'icons/day.svg'
-            console.log("despejado");
-            break;
+                    ubicacion.textContent = data.name + ", " + data.sys.country;
 
-            case "light rain":     
-            icono.src = 'icons/rainy-4.svg'
-            console.log("llovizna nublado");
-            break;
 
-            case "light rain with sun":     
-            icono.src = 'icons/rainy-3.svg'
-            console.log("llovizna sol");
-            break;
+                    switch (data.weather[0].description) {
+                        case "overcast clouds":
+                            icono.src = 'icons/cloudy.svg'
+                            break;
 
-            case "few clouds":     
-            icono.src = 'icons/cloudy-day-1.svg'
-            console.log("poco nuboso");
-            break;
+                        case "rainy":
+                            icono.src = 'icons/rainy-1.svg'
+                            console.log("lluvioso");
+                            break;
 
-            case "drizzle":     
-            icono.src = 'icons/rainy-7.svg'
-            console.log("Llovizna");
-            break;
+                        case "snowy":
+                            icono.src = 'icons/snowy-1.svg'
+                            console.log("Nieve");
+                            break;
 
-            case "light intensity drizzle":     
-            icono.src = 'icons/rainy-5.svg'
-            console.log("Llovizna ligera");
-            break;
+                        case "thunder":
+                            icono.src = 'icons/thunder.svg'
+                            console.log("Ventoso");
+                            break;
 
-            
-        }
+                        case "clear sky":
+                            icono.src = 'icons/day.svg'
+                            console.log("despejado");
+                            break;
 
-    })  
-    .catch(error => {
-        console.log(error)
-    })
-})
+                        case "light rain":
+                            icono.src = 'icons/rainy-4.svg'
+                            console.log("llovizna nublado");
+                            break;
+
+                        case "light rain with sun":
+                            icono.src = 'icons/rainy-3.svg'
+                            console.log("llovizna sol");
+                            break;
+
+                        case "few clouds":
+                            icono.src = 'icons/cloudy-day-1.svg'
+                            console.log("poco nuboso");
+                            break;
+
+                        case "drizzle":
+                            icono.src = 'icons/rainy-7.svg'
+                            console.log("Llovizna");
+                            break;
+
+                        case "light intensity drizzle":
+                            icono.src = 'icons/rainy-5.svg'
+                            console.log("Llovizna ligera");
+                            break;
+
+                        case "broken clouds":
+                            icono.src = 'icons/cloudy-night-1.svg'
+                            console.log("Nubes dispersas");
+                            break;
+                    }
+
+                })
+                .catch(error => {
+                    console.log(error)
+                })
+        })
     }
 })

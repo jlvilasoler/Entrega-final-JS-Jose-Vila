@@ -328,9 +328,8 @@ h2 {
   background-color: #201f24;
   color: rgba(191, 191, 191, 0.843);
   padding-top: 90px;
-
-
   text-align: left;
+  padding: 150px;
 }
 
 .botones_footer {
@@ -343,10 +342,10 @@ h2 {
 
 /* LEGAL */
 .legal h5 {
-  float: left;
+  float: right;
   color: #ffffff;
   font-size: 10px;
-  text-align: left;
+  text-align: right;
   padding-top: 90px;
 
 }
