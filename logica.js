@@ -1,22 +1,11 @@
-//PRODUCTOS - Renderizarmos los productos:
-//console.log(productos);
-
-// Elimina todos los elementos
 localStorage.clear();
-
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-// Traemos el ID articulos del index.html
 let contenedor = document.getElementById("articulos");
-
-
-
 
 fetch("./productos.json")
     .then(response => response.json())
     .then(data => renderizarProductos(data))
 
-// Recorremos el array de productos e inyectamos los datos de cada producto
 function renderizarProductos(productos) {
     for (const producto of productos) {
         const div = document.createElement("div")
@@ -40,10 +29,7 @@ function renderizarProductos(productos) {
 }
 
 
-
-//funcion para eliminar elementos del carro
-//Para eliminar prods del carro
-function eliminar(ev){
+function eliminar(ev) {
     console.log(ev);
     let fila = ev.target.parentElement.parentElement;
     console.log(fila);
@@ -51,22 +37,19 @@ function eliminar(ev){
     console.log(id);
     let indice = carrito.findIndex(producto => producto.id == id);
     console.log(indice)
-    //remueve el producto del carro
-    carrito.splice(indice,1);
+    carrito.splice(indice, 1);
+    localStorage.setItem("carrito", JSON.stringify(carrito))
     console.table(carrito);
     fila.remove();
-    let preciosAcumulados = carrito.reduce((acumulador,producto)=>acumulador+producto.precio,0);
-    total.innerText="Total a pagar $: "+preciosAcumulados;
-    let cant = carrito.reduce((acumulador,producto)=>acumulador+producto.cantidadCompra,0);
-    cantidad.innerText="Cantidad de Articulos: "+cant;
+    let preciosAcumulados = carrito.reduce((acumulador, producto) => acumulador + producto.precio, 0);
+    total.innerText = "Total a pagar $: " + preciosAcumulados;
+    let cant = carrito.reduce((acumulador, producto) => acumulador + producto.cantidadCompra, 0);
+    cantidad.innerText = "Cantidad de Articulos: " + cant;
 }
 
-
-//TABLA DE PRODUCTOS - Funcion para agregar productos al carrito de compras:
 function agregarACarrito(prodAAgregar) {
     carrito.push(prodAAgregar);
     console.table(carrito);
-    //Cartel aviso producto agrregado:
     Swal.fire({
         icon: 'success',
         title: 'Agregaste 1un:',
@@ -79,13 +62,8 @@ function agregarACarrito(prodAAgregar) {
         timer: 1000,
     })
 
-    //Storage - set item
     localStorage.setItem("carrito", JSON.stringify(carrito))
 
-
-
-
-    //Se agrega detalle de compra en filas en la tabla (carrito):
     document.getElementById("tablabody").innerHTML += `
     <tr>
     <td>${prodAAgregar.id}</td>
@@ -98,29 +76,16 @@ function agregarACarrito(prodAAgregar) {
     </tr>
     `;
 
-
-
-    //SUMA TOTAL DE COMPRA - visualizamos el valor total que se llega gastado en el carrito:
     let totalCarrito = carrito.reduce((acumulador, producto) => acumulador + producto.precio, 0);
     document.getElementById("total").innerText = "Total a pagar : " + "$ " + totalCarrito;
 
-    //CANTIDAD - visualizamos la cantidad total de articulos en el carrito:
     let cant = carrito.reduce((acumulador, producto) => acumulador + producto.cantidadCompra, 0);
     document.getElementById("cantidad").innerText = "Cantidad de Articulos: " + cant;
 
-
-    //CANTIDAD A LOCALSTORAGE:
     localStorage.setItem("cantidad-formulario", JSON.stringify({ totalCarrito: totalCarrito, cant: cant }));
+
+
 }
-
-
-
-
-
-
-
-
-//Boton Enviar
 
 var botonenviar = document.getElementById("btn-enviar");
 botonenviar.addEventListener("click", clickeo);
@@ -151,14 +116,6 @@ function clickeo() {
 
 }
 
-
-
-
-
-
-
-
-//API CLIMA Y UBICACION
 window.addEventListener("load", () => {
     if (navigator.geolocation) {
 
