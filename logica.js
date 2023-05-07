@@ -41,6 +41,26 @@ function renderizarProductos(productos) {
 
 
 
+//funcion para eliminar elementos del carro
+//Para eliminar prods del carro
+function eliminar(ev){
+    console.log(ev);
+    let fila = ev.target.parentElement.parentElement;
+    console.log(fila);
+    let id = fila.children[0].innerText;
+    console.log(id);
+    let indice = carrito.findIndex(producto => producto.id == id);
+    console.log(indice)
+    //remueve el producto del carro
+    carrito.splice(indice,1);
+    console.table(carrito);
+    fila.remove();
+    let preciosAcumulados = carrito.reduce((acumulador,producto)=>acumulador+producto.precio,0);
+    total.innerText="Total a pagar $: "+preciosAcumulados;
+    let cant = carrito.reduce((acumulador,producto)=>acumulador+producto.cantidadCompra,0);
+    cantidad.innerText="Cantidad de Articulos: "+cant;
+}
+
 
 //TABLA DE PRODUCTOS - Funcion para agregar productos al carrito de compras:
 function agregarACarrito(prodAAgregar) {
@@ -74,6 +94,7 @@ function agregarACarrito(prodAAgregar) {
     <td>${prodAAgregar.articulo}</td>
     <td>${prodAAgregar.descripcion}</td>
     <td>${prodAAgregar.precio}</td>
+    <td><button class="btn-eliminar" onclick="eliminar(event)">❌</button></td>
     </tr>
     `;
 
@@ -129,6 +150,11 @@ function clickeo() {
     }
 
 }
+
+
+
+
+
 
 
 

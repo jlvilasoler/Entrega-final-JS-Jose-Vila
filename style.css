@@ -273,6 +273,21 @@ h2 {
   color: rgb(0, 0, 0);
 }
 
+.btn-eliminar {
+  border-radius: 7px;
+  color: #ffffff;
+  background-color: #8e1212;
+  border-color: #201f24;
+  padding: 10px 25px 10px 25px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  background-color: #df5b33;
+  transition: 0.3s;
+}
+
 
 /** BARRAS DEPARTAMENTO - CIUDAD/LOCALIDAD: **/
 .form_content select {
